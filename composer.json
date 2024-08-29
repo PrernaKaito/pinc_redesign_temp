@@ -1,0 +1,17 @@
+{
+    "name": "prerna/pincinsurance.com-website-redesign",
+    "autoload": {
+        "psr-4": {
+            "Prerna\\PincinsuranceComWebsiteRedesign\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "PrernaKaito",
+            "email": "prerna@kaitotech.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
