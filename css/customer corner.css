@@ -1,0 +1,45 @@
+.article-custom  {
+    position: relative;
+    color: white;
+    display: block;
+}
+
+
+.article-custom  .date-label {
+    position: absolute;
+    top: 0px;
+    left: 30px;
+    background-color: #e1056d;
+    padding: 10px 10px;
+    font-size: 0.9rem;
+   border-radius: 0;
+}
+
+.articlebanner1 {
+    background-image: url(../img/article/articlebanner.jpg);
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 4em;
+    padding-bottom: 5em;
+    border-radius: 0;
+}
+.article-custom  .article-body {
+    position: absolute;
+    left: 20px;
+}
+
+.article-custom  a {
+    color: darkblue;
+    text-decoration: underline;
+}
+
+
+@media (max-width: 767px) {
+
+    .articlebanner1 {
+        margin-top: 30px; /* Add margin to separate from image on small screens */
+        padding: 30px 12px 12px 12px;
+
+    }
+}

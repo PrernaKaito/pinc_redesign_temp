@@ -1,0 +1,63 @@
+    .parent-container {
+        position: relative;
+        overflow: hidden; /* Ensure content does not spill outside the container */
+        padding-top: 20px;
+    }
+.get-in-container{
+    margin-top: 5%;
+}
+.one {
+    position: absolute;
+    top: 0;
+    left: 9%;
+    width: 41%;
+    z-index: 2;
+}
+
+    .one img {
+        /* width: 100%; */
+        /* height: 65%; */
+        object-fit: cover; /* Ensure the image covers the container */
+    }
+
+    .two {
+        position: relative;
+        /* width: 50%; */
+        /*height: 40%;  Match the height of the image */
+        background: #4256A6;
+        /* margin-left: 43%;  Align form to right of image */
+        z-index: 1;
+        margin-top: 9%;
+        margin-right: 4%;
+        padding: 18px 56px 44px 20%;
+        box-sizing: border-box; /* Include padding in the width */
+    }
+
+
+    
+    
+
+    .two .btn-submit {
+        background-color: #E1056D;
+        color: white;
+        border: none;
+        width: 44%;
+        margin-top: 7%;
+        margin-left: 20%;   
+    }
+
+    @media (max-width: 767px) {
+        .one, .two {
+            position: static; /* Stack vertically on small screens */
+            width: 100%;
+            height: auto;
+            margin-left: 0; /* Reset margin for mobile */
+        }
+
+        .two {
+            margin-top: -20px; /* Add margin to separate from image on small screens */
+            padding: 12px 12px 12px 12px;
+      
+
+        }
+    }
