@@ -53,7 +53,9 @@ h1,
 .font-16{
     font-size: 14px;
 }
-
+.font-14{
+    font-size: 12px;
+}
 .font-18{
     font-size: 18px;
 }
@@ -115,6 +117,9 @@ margin-top:4rem;
 /* Utility */
 .line-height-14{
     line-height:14px;
+}
+.line-height-32{
+    line-height:32px;
 }
 .btn-cust-primary{
     background-color: #e1056d;
@@ -358,7 +363,7 @@ margin-top:4rem;
 .corner {
     position: absolute;
     top: -15px;
-    left: 8px;
+    left: 0px;
     width: 50%;
     height: 39%;
     background-color: #4256a6;
@@ -371,19 +376,19 @@ margin-top:4rem;
     position: relative;
 }
 
-.bottom-corner {
+/* .bottom-corner {
     position: absolute;
     bottom: -15px;
     right: 0px;
     width: 92%;
     background-color: #E1116D;
     z-index: 1;
-}
+} */
 
-.bottom-image-border{
+/* .bottom-image-border{
     z-index: 9;
     position: relative; 
-}
+} */
 
 /* END first Section */
 
@@ -571,6 +576,9 @@ footer ul li a {
 footer ul li a:hover{
     color:#E1056D;
 }
+.bottom-footer-content{
+    font-size: 12px;
+}
 /* Footer END */
 
 /* ------------------------START Insurance Banneer--------------------------- */
@@ -596,6 +604,9 @@ footer ul li a:hover{
 
 .idustries_banner {
     background-image: url(../img/industries/main_banner.png);
+}
+.industries_product_page_banner{
+    background-image: url(../img/industries/product_page_banner.png);
 }
 
 /* Overlay */
@@ -623,6 +634,9 @@ footer ul li a:hover{
     color: white;
     border-radius: 0;
 }
+/* .ind-text-wrapper {
+    margin-top:12rem;
+} */
 .ind-title {
     font-family: "Poppins";
     color: #fff;
@@ -678,7 +692,18 @@ footer ul li a:hover{
 .reinsurance_banner {
     background-image: url(../img/reinsurance/main_banner.png);
 }
-
+.risk_management_banner {
+    background-image: url(../img/risk_management/main_banner.png);
+}
+.claim_management_banner {
+    background-image: url(../img/claim_management/main_banner.png);
+}
+.wellness_banner {
+    background-image: url(../img/wellness/main_banner.png);
+}
+.retail_insurance_banner{
+    background-image: url(../img/retail_insurance/main_banner.png);
+}
 /* -------------------------END ReInsurance Banner -------------------------- */
 
 
@@ -712,6 +737,7 @@ footer ul li a:hover{
     justify-content: center;
     align-items: center;
     text-align: center;
+    cursor: pointer;
 }
 .abt-text-wrapper {
     padding: 20px;
@@ -774,7 +800,7 @@ footer ul li a:hover{
 }
 
 .profile-main-designation{
-    font-size:18px;
+    font-size:12px;
 }
 
 .profile-name{
@@ -866,7 +892,8 @@ footer ul li a:hover{
     padding:12px;
     font-size:14px;
     text-align: center;
-    color:#fff
+    color:#fff;
+    font-style: italic;
 }
 
 /* ----------------Insurance Product END */
@@ -977,9 +1004,9 @@ footer ul li a:hover{
         height: 90%;
     }
 
-    .bottom-corner{
+    /* .bottom-corner{
         height: 90%;
-    }
+    } */
 }
 
 @media (min-width: 1024px) {
@@ -1004,9 +1031,9 @@ footer ul li a:hover{
     .corner {
         height: 72%;
     }
-    .bottom-corner{
+    /* .bottom-corner{
         height: 97%;
-    }
+    } */
 
     .second-section-list-item {
         font-size: 20px;
@@ -1016,8 +1043,11 @@ footer ul li a:hover{
     .font-16 {
         font-size: 16px;
     }
-    footer ul li {
+    .font-14 {
         font-size: 14px;
+    }
+    footer ul li {
+        font-size: 12px;
         margin-top: 10px;
     }
 }
@@ -1037,7 +1067,7 @@ footer ul li a:hover{
         box-sizing: border-box;
         box-shadow: 10px 7px 15px rgba(0, 0, 0, 0.2);
     }
-    .ind-card {
+    /* .ind-card {
         width: 80%;
-    }
+    } */
 }
