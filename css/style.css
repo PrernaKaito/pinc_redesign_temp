@@ -196,7 +196,7 @@
 }
 
 .dropdown-menu {
-background: rgba(255, 191, 226, 0.8); /* Light beige/pink background with 80% opacity */
+  background-color: #fadee9;
   padding: 20px;
   width: 660px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -849,7 +849,7 @@ background: rgba(255, 191, 226, 0.8); /* Light beige/pink background with 80% op
 
     .card-exp{
         border-radius: 0;
-        background: linear-gradient(to right, #e0026b, #f484b8); /* Adjust the color stops as needed */
+        background: linear-gradient(to right, #e1056d, #faaacc);
         width: 95%;
         border: none;
     }
