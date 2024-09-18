@@ -17,3 +17,10 @@ function reveal() {
 
 window.addEventListener("scroll", reveal);
 reveal();
+
+
+function scrollToForm() {
+    document.getElementById("get-in-touch-form-section").scrollIntoView({
+        behavior: 'smooth' // Enables smooth scrolling
+    });
+}

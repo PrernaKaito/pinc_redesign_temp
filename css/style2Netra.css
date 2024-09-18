@@ -722,6 +722,9 @@ footer ul li a:hover{
     border-radius: 5px;
     transition: opacity 0.3s ease;
 }
+.col-md-3:nth-child(10)  .abt-small-title{
+    bottom: 7px;
+}
 
 .abt-card-img-overlay {
     background: rgba(8, 31, 136, 0.6);
