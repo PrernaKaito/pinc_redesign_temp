@@ -298,8 +298,8 @@
     <div class="container mb-5 mt-5">
       <div class="card text-center bg-cust-secondary cust-border-blue">
         <div class="card-body py-5">
-          <h2 class="font-24  mb-2">Can't find your industry?</h2>
-          <p class="font-18">Explore Industry Solutions that keep your risk in check?</p>
+          <h2 class="font-24  mb-2">Can’t find what you’re looking for?</h2>
+          <p class="font-18">Explore Insurance Solutions that keep your risk in check!</p>
           <button class="btn rounded-pill bg-cust-purple text-white px-4">Search <a onclick="scrollToForm()" class="cursor-pointer arrow-search"
               target="_blank"></a></button>
         </div>
@@ -587,7 +587,7 @@
               <h5 class="card-title mt-4 font-24">Newsletter</h5>
               <p class="text-dark mt-3 font-18">Keep up with our latest news &amp; events. Subscribe to our newsletter
               </p>
-              <form id="subscriptionForm" action="subscribe.php" method="POST" onsubmit="handleFormSubmit(event)">
+              <form id="subscriptionForm" action="subscribe.php" method="POST" onsubmit="return validateForm()">
                 <div class="form-group d-flex text-end mt-4 newsletter">
                   <label for="emailer" class="visually-hidden">Email</label>
                   <input type="email" class="form-control newsletter-form-control" placeholder="Enter your email"
@@ -640,7 +640,7 @@
             <li><a href="aboutus.html">About Us</a></li>
             <li><a href="insights.html">Insights</a></li>
             <!--<li><a href="#">Blogs</a></li>-->
-            <li><a href="#">Careers</a></li>
+            <!--<li><a href="#">Careers</a></li>-->
             <li><a href="contactUs.html">Contact Us</a></li>
           </ul>
         </div>

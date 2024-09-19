@@ -201,9 +201,8 @@
       <div class="row justify-content-between">
         <div class="col-md-6">
           <div>
-            <h2 class="font-26 fw-semibold mb-4 ">Group Mediclaim Policy</h2>
             <div>
-              <p class="font-18 mt-4">Navigating the complex landscape of corporate risks can be daunting. PINC
+              <p class="font-18 ">Navigating the complex landscape of corporate risks can be daunting. PINC
                 Insurance's Liability Practice offers a specialized solution. Our team brings deep industry knowledge to
                 pinpoint and mitigate your company's potential exposures.</p>
               <p class="font-18 mt-4">Through our partnerships with leading multinational corporations, we've developed
@@ -235,20 +234,21 @@
               <p>Hospitalisation Expenses covered include:</p>
               <div>
                 <ul class="ul-list-points mt-4">
-                  <li>Directors and Officers Insurance</li>
-                  <li>It also covers the cost of medicines, surgical appliances,
-                    and procedures.</li>
-                  <li>Commercial Crime Insurance</li>
-                  <li>Professional Indemnity Insurance</li>
-                  <li>Financial Institutions Solutions</li>
-                  <li>Warranty and Indemnity Insurance</li>
-                  <li>Product Liability</li>
-                  <li>Product Recall</li>
-                  <li>Manufactures Professional Indemnity</li>
-                  <li>Cyber Crime Insurance</li>
-                  <li>Clinical Trials</li>
-                  <li>Pollution Liability</li>
-                  <li>Third Party Liability Insurance</li>
+
+                  <li> Directors and Officers Insurance</li>
+                  <li> Commercial Crime Insurance</li>
+                  <li> Professional Indemnity Insurance</li>
+                  <li> Financial Institutions Solutions</li>
+                  <li> Warranty and Indemnity Insurance</li>
+                  <li> Product Liability</li>
+                  <li> Product Recall</li>
+                  <li> Manufactures Professional Indemnity</li>
+                  <li> Cyber Crime Insurance</li>
+                  <li> Clinical Trials</li>
+                  <li> Pollution Liability</li>
+                  <li> Third Party Liability Insurance</li>
+                  
+
                 </ul>
               </div>
             </div>
@@ -393,8 +393,8 @@
     <div class="container mb-5 mt-5">
       <div class="card text-center bg-cust-secondary cust-border-blue">
         <div class="card-body py-5">
-          <h2 class="font-24  mb-2">Can't find your industry?</h2>
-          <p class="font-18">Explore Industry Solutions that keep your risk in check?</p>
+          <h2 class="font-24  mb-2">Can’t find what you’re looking for?</h2>
+          <p class="font-18">Explore Insurance Solutions that keep your risk in check!</p>
           <button class="btn rounded-pill bg-cust-purple text-white px-4">Search <a onclick="scrollToForm()" class="cursor-pointer arrow-search"
               target="_blank"></a></button>
         </div>
@@ -682,7 +682,7 @@
               <h5 class="card-title mt-4 font-24">Newsletter</h5>
               <p class="text-dark mt-3 font-18">Keep up with our latest news &amp; events. Subscribe to our newsletter
               </p>
-              <form id="subscriptionForm" action="subscribe.php" method="POST" onsubmit="handleFormSubmit(event)">
+              <form id="subscriptionForm" action="subscribe.php" method="POST" onsubmit="return validateForm()">
                 <div class="form-group d-flex text-end mt-4 newsletter">
                   <label for="emailer" class="visually-hidden">Email</label>
                   <input type="email" class="form-control newsletter-form-control" placeholder="Enter your email"
@@ -735,7 +735,7 @@
             <li><a href="aboutus.html">About Us</a></li>
             <li><a href="insights.html">Insights</a></li>
             <!--<li><a href="#">Blogs</a></li>-->
-            <li><a href="#">Careers</a></li>
+            <!--<li><a href="#">Careers</a></li>-->
             <li><a href="contactUs.html">Contact Us</a></li>
           </ul>
         </div>

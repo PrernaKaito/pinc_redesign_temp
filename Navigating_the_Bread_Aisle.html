@@ -617,7 +617,7 @@
               <h5 class="card-title mt-4 font-24">Newsletter</h5>
               <p class="text-dark mt-3 font-18">Keep up with our latest news &amp; events. Subscribe to our newsletter
               </p>
-              <form id="subscriptionForm" action="subscribe.php" method="POST" onsubmit="handleFormSubmit(event)">
+              <form id="subscriptionForm" action="subscribe.php" method="POST" onsubmit="return validateForm()">
                 <div class="form-group d-flex text-end mt-4 newsletter">
                   <label for="emailer" class="visually-hidden">Email</label>
                   <input type="email" class="form-control newsletter-form-control" placeholder="Enter your email"
@@ -670,7 +670,7 @@
             <li><a href="aboutus.html">About Us</a></li>
             <li><a href="insights.html">Insights</a></li>
             <!--<li><a href="#">Blogs</a></li>-->
-            <li><a href="#">Careers</a></li>
+            <!--<li><a href="#">Careers</a></li>-->
             <li><a href="contactUs.html">Contact Us</a></li>
           </ul>
         </div>

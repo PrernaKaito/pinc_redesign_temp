@@ -16,33 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $formType = filter_input(INPUT_POST, 'form_type', FILTER_SANITIZE_STRING);
     error_log('Received Form Type: ' . $formType);
 
-    $sendThankYou = function($recipientEmail, $name) use ($smtpHost, $smtpPort, $smtpUsername, $smtpPassword, $smtpSecure) {
-        $mailer = new PHPMailer(true);
-        try {
-            $mailer->isSMTP();
-            $mailer->Host = $smtpHost;
-            $mailer->SMTPAuth = true;
-            $mailer->Username = $smtpUsername;
-            $mailer->Password = $smtpPassword;
-            $mailer->SMTPSecure = $smtpSecure;
-            $mailer->Port = $smtpPort;
-
-            $mailer->setFrom($smtpUsername, 'KaitoTech');
-            $mailer->addAddress($recipientEmail);
-            $mailer->isHTML(true);
-            $mailer->Subject = 'Thank You for Your Inquiry';
-            $mailer->Body = "
-                <p>Dear $name,</p>
-                <p>Thank you for reaching out to us. We have received your inquiry and will get back to you shortly.</p>
-                <p>Best regards,<br>KaitoTech</p>
-            ";
-            $mailer->send();
-            error_log('Thank-you email sent successfully to ' . $recipientEmail);
-        } catch (Exception $e) {
-            error_log('Failed to send thank-you email. Error: ' . $mailer->ErrorInfo);
-        }
-    };
-
     if ($formType === 'contactForm') {
         $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
@@ -77,10 +50,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <p><strong>Enquiry Date:</strong><br>" . date('d-m-Y') . "</p>
             ";
             $mailer->send();
-
-            // Send thank-you email to the user
-            $sendThankYou($email, $name);
-
             http_response_code(200);
             echo 'Message sent successfully!';
         } catch (Exception $e) {
@@ -122,10 +91,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <p><strong>Message:</strong> $message</p>
             ";
             $mailer->send();
-
-            // Send thank-you email to the user
-            $sendThankYou($email, $fullname);
-
             http_response_code(200);
             echo 'Message sent successfully!';
         } catch (Exception $e) {
