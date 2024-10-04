@@ -9,13 +9,13 @@
   <meta content="" name="description" />
 
   <!-- Google Web Fonts -->
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 
   <!-- Customized Bootstrap Stylesheet -->
   <link href="css/bootstrap.min.css" rel="stylesheet" />
 
   <!-- Template Stylesheet -->
-  <link href="css/style2Netra.css" rel="stylesheet" />
+  <link href="css/new_style.css" rel="stylesheet" />
   <link rel="stylesheet" href="font/poppins/stylesheet.css" />
   <!-- ICON -->
   <link rel="stylesheet" href="font/font-awesome/css/font-awesome.css" />
@@ -27,7 +27,7 @@
 
 <body>
   <!--START Navbar -->
-  <header>
+  <header class="sticky-header">
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light py-0">
 
@@ -77,27 +77,32 @@
               <ul class="submenu dropdown-menu" aria-labelledby="Corporatedropdown">
                 <div class="row">
                   <div class="col-12 col-md-6">
+                    <li><a class="submenu dropdown-item" href="Property_and_Engineering_Insurance.html">Property &
+                        Engineering Insurance</a></li>
+
+                    <li><a class="submenu dropdown-item" href="liability_insurance.html">Liability Insurance</a></li>
+
+                    <li><a class="submenu dropdown-item" href="Marine_Transit_Insurance.html">Marine Transit
+                        Insurance</a></li>
+
+                    <li><a class="submenu dropdown-item" href="Trade_Credit_Insurance.html">Trade Credit Insurance</a>
+                    </li>
+                    <li><a class="submenu dropdown-item" href="Media_and_Entertainment_Insurance.html">Media &
+                        Entertainment Insurance</a></li>
+                  </div>
+                  <div class="col-12 col-md-6">
+
                     <li><a class="submenu dropdown-item" href="emp_benifits_ins.html">Employee Benefits Insurance</a>
                     </li>
                     <li><a class="submenu dropdown-item" href="motor_fleet_insurance.html">Motor Fleet Insurance</a>
                     </li>
-                    <li><a class="submenu dropdown-item" href="Property_and_Engineering_Insurance.html">Property &
-                        Engineering Insurance</a></li>
                     <li><a class="submenu dropdown-item" href="Office_Package_Insurance.html">Office Package
                         Insurance</a></li>
-                    <li><a class="submenu dropdown-item" href="Group_Travel_Insurance_Plans.html">Group Travel Insurance
-                        Plans</a></li>
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <li><a class="submenu dropdown-item" href="liability_insurance.html">Liability Insurance</a></li>
-                    <li><a class="submenu dropdown-item" href="Marine_Transit_Insurance.html">Marine Transit
-                        Insurance</a></li>
-                    <li><a class="submenu dropdown-item" href="Trade_Credit_Insurance.html">Trade Credit Insurance</a>
-                    </li>
                     <li><a class="submenu dropdown-item" href="Shopkeepers_Package_and_Jewellers_Block.html">Shopkeepers
                         Package & Jewellers Block</a></li>
-                    <li><a class="submenu dropdown-item" href="Media_and_Entertainment_Insurance.html">Media &
-                        Entertainment Insurance</a></li>
+
+                    <li><a class="submenu dropdown-item" href="Group_Travel_Insurance_Plans.html">Group Travel Insurance
+                        Plans</a></li>
                   </div>
                 </div>
               </ul>
@@ -130,7 +135,7 @@
               </ul>
             </li>
             <li class="nav-item py-0 py-lg-3">
-              <a href="retail insurance.html" class="nav-link">Retail Insurance</a>
+              <a href="insurance_page.html" class="nav-link">Retail Insurance</a>
             </li>
             <li class="nav-item py-0 py-lg-3">
               <a href="insights.html" class="nav-link">Insights</a>
@@ -149,10 +154,10 @@
   <!-- Bannerr -->
   <section id="home">
     <div class="container-fluid">
-      <div class="row insurance_banner ins_main_banner justify-content-center">
+      <div class="row contactUs_banner inner_main_page_banner justify-content-center">
         <div class="col-lg-10 col-sm-12 py-5 text-white">
           <h1 class="flex-wrap text-center">
-            <span class="mb-0 text-shadow-dark heading40 text-light">Insurance</span>
+            <span class="mb-0 text-shadow-dark heading40 text-light">Contact Us</span>
           </h1>
         </div>
       </div>
@@ -187,7 +192,7 @@
           <div class="col-sm-12 mb-4 col-md-6">
 
             <div class="mb-4 reveal fade-left active">
-              <img src="img/aboutUs/hand.jpg" class="img-fluid">
+              <img src="img/contactus/hand2.png" class="img-fluid">
             </div>
 
 
@@ -202,7 +207,7 @@
               </div>
             </div>
             <div class="contact-form-container p-3 p-md-5">
-              <form action="contact.php" method="POST" id="contactFormer" >
+              <form action="contact.php" method="POST" id="contactFormer">
                 <!-- Hidden field to distinguish between different forms -->
                 <input type="hidden" name="form_type" value="contactFormer">
 
@@ -243,8 +248,8 @@
                               <div class="g-recaptcha" data-sitekey="your-site-key"></div>
                           </div> -->
                 <div class="mt-4">
-                  <button id="send" type="button" class="secondary1 btn btn-cust-primary rounded-pill px-5">Submit <a
-                      href="#" class="ms-2 cursor-pointer arrow121 font-18 text-white" target="_blank"></a></button>
+                  <button id="send" type="button" class="secondary1 btn btn-cust-primary rounded-pill px-5">Submit
+                  </button>
                 </div>
               </form>
 
@@ -279,6 +284,10 @@
                 role="tab" aria-controls="pune" aria-selected="false">Pune</a>
               <a class="nav-item nav-link cust-secondary-gray" id="cimbatore-tab" data-bs-toggle="tab" href="#cimbatore"
                 role="tab" aria-controls="cimbatore" aria-selected="false">Coimbatore</a>
+                <a class="nav-item nav-link cust-secondary-gray" id="indore-tab" data-bs-toggle="tab" href="#indore"
+                role="tab" aria-controls="indore" aria-selected="false">Indore</a>
+                <a class="nav-item nav-link cust-secondary-gray" id=" udaipur-tab" data-bs-toggle="tab" href="#udaipur"
+                role="tab" aria-controls=" udaipur " aria-selected="false"> Udaipur </a>
             </div>
           </nav>
           <div class="tab-content pt-3 pb-2" id="location-tabContent">
@@ -321,10 +330,10 @@
                         </span>
                       </address>
                     </li>
-                    <li>
+                    <!-- <li>
                       <i class="fa fa-phone fa-lg"></i>
                       <span class="cust-fs-14 num ms-2 text-secondary">1800 267 2670</span>
-                    </li>
+                    </li> -->
                   </ul>
                 </div>
                 <div class="col-lg-6">
@@ -347,14 +356,14 @@
                         </span>
                       </address>
                     </li>
-                    <li>
+                    <!-- <li>
                       <i class="fa fa-phone fa-lg"></i>
                       <span class="cust-fs-14 num ms-2 text-secondary">+91 11 4516 6705</span>
                     </li>
                     <li class="mt-4">
                       <i class="fa fa-fax fa-lg "></i>
                       <span class="cust-fs-14 num ms-2 text-secondary">+91 11 4516 6704</span>
-                    </li>
+                    </li> -->
                   </ul>
                 </div>
                 <div class="col-lg-6">
@@ -379,10 +388,10 @@
                         </span>
                       </address>
                     </li>
-                    <li>
+                    <!-- <li>
                       <i class="fa fa-phone fa-lg"></i>
                       <span class="cust-fs-14 num ms-2 text-secondary">+91 044 4852 2307</span>
-                    </li>
+                    </li> -->
                   </ul>
                 </div>
                 <div class="col-lg-6">
@@ -405,10 +414,10 @@
                         </span>
                       </address>
                     </li>
-                    <li>
+                    <!-- <li>
                       <i class="fa fa-phone fa-lg"></i>
                       <span class="cust-fs-14 num ms-2 text-secondary">080-25224422 | Fax: 080-25225540</span>
-                    </li>
+                    </li> -->
                   </ul>
                 </div>
                 <div class="col-lg-6">
@@ -432,10 +441,10 @@
                         </span>
                       </address>
                     </li>
-                    <li>
+                    <!-- <li>
                       <i class="fa fa-phone fa-lg"></i>
                       <span class="cust-fs-14 num ms-2 text-secondary">+91-020-24325460</span>
-                    </li>
+                    </li> -->
                   </ul>
                 </div>
                 <div class="col-lg-6">
@@ -454,20 +463,80 @@
                       <address class="cust-fs-14 ms-3 text-secondary">
                         <span class="num">
                           S5, 424H, 2nd Floor, Red Rose Towers, D B Road, Rs Puram,
-                          Coimbatore - 641002 India.                          
+                          Coimbatore - 641002 India.
                         </span>
                       </address>
                     </li>
-                    <li>
+                    <!-- <li>
                       <i class="fa fa-phone fa-lg"></i>
                       <span class="cust-fs-14 num ms-2 text-secondary">+91 9952832433</span>
-                    </li>
+                    </li> -->
                   </ul>
                 </div>
                 <div class="col-lg-6">
                   <iframe sandbox="allow-scripts" class="iframe_gmap" title="coimbatore_map"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.459433962636!2d76.9471517139226!3d11.004114992167267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8591a45bb6d55%3A0x2a14539007b99778!2s122%2C+W+Ramalingam+Rd%2C+R.S.+Puram%2C+Coimbatore%2C+Tamil+Nadu+641002!5e0!3m2!1sen!2sin!4v1556093447854!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7832.870574007413!2d76.9508756!3d11.0059315!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8591b16d02199%3A0x1f1a6836efa0df43!2sRed%20Rose%20Towers!5e0!3m2!1sen!2sin!4v1726814919742!5m2!1sen!2sin"
                     width="100%" height="350" allowfullscreen=""></iframe>
+
+
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="indore" role="tabpanel" aria-labelledby="indore-tab">
+              <div class="row pt-3">
+                <div class="col-lg-6">
+                  <ul class="list-unstyled container">
+                    <li class="d-flex">
+                      <i class="fa fa-map-marker fa-lg mt-1"></i>
+                      <address class="cust-fs-14 ms-3 text-secondary">
+                        <span class="num">
+                          IWG Plc, Regus Central Point Business Centre Pvt Ltd, DNR 90, Unit No. 327, 
+                          3rd Floor, 569/3, MG Road, Indore (MP) - 452 003 India.
+
+                        </span>
+                      </address>
+                    </li>
+                    <!-- <li>
+                      <i class="fa fa-phone fa-lg"></i>
+                      <span class="cust-fs-14 num ms-2 text-secondary">+91 9952832433</span>
+                    </li> -->
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <iframe sandbox="allow-scripts" class="iframe_gmap" title="indore_map"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7832.870574007413!2d76.9508756!3d11.0059315!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8591b16d02199%3A0x1f1a6836efa0df43!2sRed%20Rose%20Towers!5e0!3m2!1sen!2sin!4v1726814919742!5m2!1sen!2sin"
+                    width="100%" height="350" allowfullscreen=""></iframe>
+
+
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="udaipur" role="tabpanel" aria-labelledby="udaipur-tab">
+              <div class="row pt-3">
+                <div class="col-lg-6">
+                  <ul class="list-unstyled container">
+                    <li class="d-flex">
+                      <i class="fa fa-map-marker fa-lg mt-1"></i>
+                      <address class="cust-fs-14 ms-3 text-secondary">
+                        <span class="num">
+                          719, City Center, Ashok Nagar, Main Road, Udaipur - 313001 India.
+
+                        </span>
+                      </address>
+                    </li>
+                    <!-- <li>
+                      <i class="fa fa-phone fa-lg"></i>
+                      <span class="cust-fs-14 num ms-2 text-secondary">+91 9952832433</span>
+                    </li> -->
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3628.0818283428207!2d73.70208467405759!3d24.586372056172873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3967e59ceecec20f%3A0x22fe710125f3b0a!2s719%2C%20Ashok%20Nagar%20Main%20Rd%2C%20Ashok%20Nagar%2C%20Udaipur%2C%20Rajasthan%20313001!5e0!3m2!1sen!2sin!4v1727957813163!5m2!1sen!2sin" 
+                  width="100%" height="350" allowfullscreen=""></iframe>
+
+
                 </div>
               </div>
             </div>
@@ -482,71 +551,70 @@
 
 
   <!--START GET IN TOUCH SECTION -->
-  <section id="get-in-touch-form-section">
-    <div class="container parent-container py-5">
-      <div class="px-0 pe-md-5">
-        <div class="row">
-          <div class="col-12 col-md-5  d-none d-md-block position-relative">
-            <img src="./img/industries/Contact_home_bg.png" alt="Insurance Banner" class="get-in-touch-img">
-          </div>
-          <div class="col-12 col-md-7 get-in-touch-form-container text-white">
-            <div class="">
-              <h2 class="font-24 text-start text-md-left text-white mt-4 mb-4">Get in touch</h2>
-              <form action="contact.php" method="POST" id="contactForm">
+  <!-- <section id="get-in-touch-form-section">
+        <div class="container parent-container py-5">
+          <div class="px-0 pe-md-5">
+            <div class="row">
+              <div class="col-12 col-md-5  d-none d-md-block position-relative">
+                <img src="./img/contactus/Contact_home_bg.png" alt="Insurance Banner" class="get-in-touch-img">
+              </div>
+              <div class="col-12 col-md-7 get-in-touch-form-container text-white">
+                <div class="">
+                  <h2 class="font-24 text-start text-md-left text-white mt-4 mb-4">Get in touch</h2>
+                  <form action="contact.php" method="POST" id="contactForm">
 
-                <div class="form-floating secondary1 mb-2">
-                  <input type="text" class="form-control bg-transparent " id="name" name="name"
-                    placeholder="name@example.com" required="">
-                  <label for="name" class="px-0">Full Name*</label>
-                  <span class="" id="name_error" style="color: red"></span>
-                </div>
+                    <div class="form-floating secondary1 mb-2">
+                      <input type="text" class="form-control bg-transparent " id="name" name="name"
+                        placeholder="name@example.com" required="">
+                      <label for="name" class="px-0">Full Name*</label>
+                      <span class="" id="name_error" style="color: red"></span>
+                    </div>
 
-                <div class="form-floating secondary1 mb-2">
-                  <input type="email" class="form-control bg-transparent" id="email" name="email"
-                    placeholder="email.com" required="">
-                  <label for="email" class="px-0">Email*</label>
-                  <!-- <span id="email_error" style="color: red"></span><br> -->
+                    <div class="form-floating secondary1 mb-2">
+                      <input type="email" class="form-control bg-transparent" id="email" name="email"
+                        placeholder="email.com" required="">
+                      <label for="email" class="px-0">Email*</label>
+                    </div>
+                    <div class="form-floating secondary1 mb-2">
+                      <input type="text" class="form-control bg-transparent" id="mobile" name="mobile"
+                        placeholder="Enter Contact No." required="">
+                      <label for="mobile" class="px-0">Contact Number*</label>
+                      <span id="mobile_error" style="color: red"></span>
+                    </div>
+                    <div class="form-floating secondary1">
+                      <input type="text" class="form-control bg-transparent" id="city" name="city" placeholder="City"
+                        required="">
+                      <label for="city" class="px-0">City*</label>
+                      <span id="city_error" style="color: red"></span>
+                    </div>
+                    <div class="text-center mt-4">
+                      <button id="submit" type="button"
+                        class="secondary1 btn btn-cust-primary rounded-pill px-5">Submit</button>
+                    </div>
+                  </form>
                 </div>
-                <div class="form-floating secondary1 mb-2">
-                  <input type="text" class="form-control bg-transparent" id="mobile" name="mobile"
-                    placeholder="Enter Contact No." required="">
-                  <label for="mobile" class="px-0">Contact Number*</label>
-                  <span id="mobile_error" style="color: red"></span>
-                </div>
-                <div class="form-floating secondary1">
-                  <input type="text" class="form-control bg-transparent" id="city" name="city" placeholder="City"
-                    required="">
-                  <label for="city" class="px-0">City*</label>
-                  <span id="city_error" style="color: red"></span>
-                </div>
-                <div class="text-center mt-4">
-                  <button id="submit" type="button"
-                    class="secondary1 btn btn-cust-primary rounded-pill px-5">Submit</button>
-                </div>
-              </form>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <div class="modal fade" id="thankYouModal" tabindex="-1" role="dialog" aria-labelledby="thankYouModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="thankYouModalLabel">Thank You!</h5>
-          </div>
-          <div class="modal-body bg-light">
-            Thank you for signing up for your demo! We will be in touch with you shortly.
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        <div class="modal fade" id="thankYouModal" tabindex="-1" role="dialog" aria-labelledby="thankYouModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="thankYouModalLabel">Thank You!</h5>
+              </div>
+              <div class="modal-body bg-light">
+                Thank you for signing up for your demo! We will be in touch with you shortly.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section> -->
   <!-- END GET IN TOUCH SECTION -->
 
   <section>
@@ -559,11 +627,10 @@
               <ul class="list-unstyled mb-0">
                 <li class="d-flex mb-3">
                   <i class="fa fa-map-marker text-white"></i>
-
-                  <div class="d-flex flex-column ms-4 text-white ">
+                  <div class="d-flex flex-column ms-4 text-white">
                     <span class="line-height-14">PINC Insurance - 1219, 12th Floor,</span>
                     <span> Maker Chamber V, Nariman Point, </span>
-                    <span> Mumbai,Maharashtra 400021 - India</span>
+                    <span> Mumbai, Maharashtra 400021 - India</span>
                   </div>
                 </li>
                 <li class="d-flex mb-3">
@@ -572,8 +639,9 @@
                 </li>
                 <li class="d-flex ">
                   <i class="fa fa-envelope text-white"></i>
-                  <div class="ms-4"><a class=" text-white secondary1" href="mailto:info@pincinsure.com"
-                      target="_top">info@pincinsure.com</a></div>
+                  <div class="ms-4">
+                    <a class="text-white secondary1" href="mailto:info@pincinsure.com" target="_top">info@pincinsure.com</a>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -581,9 +649,8 @@
           <div class="col-md-7">
             <div class="card-body">
               <h5 class="card-title mt-4 font-24">Newsletter</h5>
-              <p class="text-dark mt-3 font-18">Keep up with our latest news &amp; events. Subscribe to our newsletter
-              </p>
-              <form id="subscriptionForm" action="subscribe.php" method="POST" onsubmit="return validateForm()">
+              <p class="text-dark mt-3 font-18">Keep up with our latest news &amp; events. Subscribe to our newsletter</p>
+              <form id="subscriptionForm" onsubmit="handleFormSubmit(event)">
                 <div class="form-group d-flex text-end mt-4 newsletter">
                   <label for="emailer" class="visually-hidden">Email</label>
                   <input type="email" class="form-control newsletter-form-control" placeholder="Enter your email"
@@ -597,6 +664,25 @@
       </div>
       <!--END NEWSLETTER Section -->
     </div>
+  
+    <!-- Bootstrap Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Thank You!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Thank you for subscribing to our newsletter!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
   </section>
 
 

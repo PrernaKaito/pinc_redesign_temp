@@ -9,13 +9,13 @@
   <meta content="" name="description" />
 
   <!-- Google Web Fonts -->
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 
   <!-- Customized Bootstrap Stylesheet -->
   <link href="css/bootstrap.min.css" rel="stylesheet" />
 
   <!-- Template Stylesheet -->
-  <link href="css/style2Netra.css" rel="stylesheet" />
+  <link href="css/new_style.css" rel="stylesheet" />
   <link rel="stylesheet" href="font/poppins/stylesheet.css" />
   <!-- ICON -->
   <link rel="stylesheet" href="font/font-awesome/css/font-awesome.css" />
@@ -27,7 +27,7 @@
 
 <body>
   <!--START Navbar -->
-  <header>
+  <header class="sticky-header">
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light py-0">
 
@@ -41,7 +41,8 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <div class="navbar-nav ms-auto py-0">
             <li class="nav-item dropdown py-0 py-lg-3">
-              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" aria-expanded="false" href="industries.html">
+              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" aria-expanded="false"
+                href="industries.html">
                 Industries
               </a>
               <ul class="submenu dropdown-menu" aria-labelledby="navbarDropdown">
@@ -49,7 +50,8 @@
                   <div class="col-12 col-md-6">
                     <li><a class="submenu dropdown-item" href="infrastructure_and_engineering.html">Infrastructure
                         Industry</a></li>
-                    <li><a class="submenu dropdown-item" href="life_science_and_pharma.html">Life Sciences & Pharma Industry</a>
+                    <li><a class="submenu dropdown-item" href="life_science_and_pharma.html">Life Sciences & Pharma
+                        Industry</a>
                     </li>
                     <li><a class="submenu dropdown-item" href="plastic.html">Plastic Industry</a></li>
                     <li><a class="submenu dropdown-item" href="startups.html">Startups Industry</a></li>
@@ -65,7 +67,8 @@
               </ul>
             </li>
             <li class="nav-item dropdown py-0 py-lg-3">
-              <a class="nav-link dropdown-toggle" id="Corporatedropdown" role="button" aria-expanded="false" href="insurance.html">
+              <a class="nav-link dropdown-toggle active-nav" id="Corporatedropdown" role="button" aria-expanded="false"
+                href="insurance.html">
                 Corporate Insurance
                 <!-- <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow">
                   <path d="M7 10l5 5 5-5H7z" fill="#000"/>
@@ -74,44 +77,65 @@
               <ul class="submenu dropdown-menu" aria-labelledby="Corporatedropdown">
                 <div class="row">
                   <div class="col-12 col-md-6">
-                    <li><a class="submenu dropdown-item" href="emp_benifits_ins.html">Employee Benefits Insurance</a></li>
-                    <li><a class="submenu dropdown-item" href="motor_fleet_insurance.html">Motor Fleet Insurance</a></li>
-                    <li><a class="submenu dropdown-item" href="Property_and_Engineering_Insurance.html">Property & Engineering Insurance</a></li>
-                    <li><a class="submenu dropdown-item" href="Office_Package_Insurance.html">Office Package Insurance</a></li>
-                    <li><a class="submenu dropdown-item" href="Group_Travel_Insurance_Plans.html">Group Travel Insurance Plans</a></li>
+                    <li><a class="submenu dropdown-item" href="Property_and_Engineering_Insurance.html">Property &
+                        Engineering Insurance</a></li>
+
+                    <li><a class="submenu dropdown-item" href="liability_insurance.html">Liability Insurance</a></li>
+
+                    <li><a class="submenu dropdown-item" href="Marine_Transit_Insurance.html">Marine Transit
+                        Insurance</a></li>
+
+                    <li><a class="submenu dropdown-item" href="Trade_Credit_Insurance.html">Trade Credit Insurance</a>
+                    </li>
+                    <li><a class="submenu dropdown-item" href="Media_and_Entertainment_Insurance.html">Media &
+                        Entertainment Insurance</a></li>
                   </div>
                   <div class="col-12 col-md-6">
-                    <li><a class="submenu dropdown-item" href="liability_insurance.html">Liability Insurance</a></li>
-                    <li><a class="submenu dropdown-item" href="Marine_Transit_Insurance.html">Marine Transit Insurance</a></li>
-                    <li><a class="submenu dropdown-item" href="Trade_Credit_Insurance.html">Trade Credit Insurance</a></li>
-                    <li><a class="submenu dropdown-item" href="Shopkeepers_Package_and_Jewellers_Block.html">Shopkeepers Package & Jewellers Block</a></li>
-                    <li><a class="submenu dropdown-item" href="Media_and_Entertainment_Insurance.html">Media & Entertainment Insurance</a></li>
+
+                    <li><a class="submenu dropdown-item" href="emp_benifits_ins.html">Employee Benefits Insurance</a>
+                    </li>
+                    <li><a class="submenu dropdown-item" href="motor_fleet_insurance.html">Motor Fleet Insurance</a>
+                    </li>
+                    <li><a class="submenu dropdown-item" href="Office_Package_Insurance.html">Office Package
+                        Insurance</a></li>
+                    <li><a class="submenu dropdown-item" href="Shopkeepers_Package_and_Jewellers_Block.html">Shopkeepers
+                        Package & Jewellers Block</a></li>
+
+                    <li><a class="submenu dropdown-item" href="Group_Travel_Insurance_Plans.html">Group Travel Insurance
+                        Plans</a></li>
                   </div>
                 </div>
               </ul>
 
             </li>
             <li class="nav-item dropdown py-0 py-lg-3">
-              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" aria-expanded="false" href="reinsurance.html">
-               Reinsurance
+              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" aria-expanded="false"
+                href="reinsurance.html">
+                Reinsurance
               </a>
               <ul class="submenu submenu-reinsurance dropdown-menu" aria-labelledby="navbarDropdown">
                 <div class="row">
                   <div class="col-12">
-                    <li><a class="submenu dropdown-item" href="Specie_And_Fine_Arts_Insurance.html">Specie & Fine Arts Insurance</a></li>
-                    <li><a class="submenu dropdown-item" href="Political_Risk_and_Terrorism_Insurance.html">Political Risk & Terrorism Insurance</a>
+                    <li><a class="submenu dropdown-item" href="Specie_And_Fine_Arts_Insurance.html">Specie & Fine Arts
+                        Insurance</a></li>
+                    <li><a class="submenu dropdown-item" href="Political_Risk_and_Terrorism_Insurance.html">Political
+                        Risk & Terrorism Insurance</a>
                     </li>
-                    <li><a class="submenu dropdown-item" href="Financial_Lines_and_Casualty_Lines_Insurance.html">Financial Lines & Casualty Lines Insurance</a></li>
+                    <li><a class="submenu dropdown-item"
+                        href="Financial_Lines_and_Casualty_Lines_Insurance.html">Financial Lines & Casualty Lines
+                        Insurance</a></li>
                     <li><a class="submenu dropdown-item" href="Reinsurance_Treaty.html">Reinsurance Treaty</a></li>
                     <li><a class="submenu dropdown-item" href="Aviation_Industry.html">Aviation Industry</a></li>
-                    <li><a class="submenu dropdown-item" href="Marine_Hull_Insurance.html">Marine Hull Insurance</a></li>
-                    <li><a class="submenu dropdown-item" href="Property_and_Engineering.html">Property & Engineering</a></li>
+                    <li><a class="submenu dropdown-item" href="Marine_Hull_Insurance.html">Marine Hull Insurance</a>
+                    </li>
+                    <li><a class="submenu dropdown-item" href="Property_and_Engineering.html">Property & Engineering</a>
+                    </li>
                   </div>
                 </div>
               </ul>
             </li>
             <li class="nav-item py-0 py-lg-3">
-              <a href="retail insurance.html" class="nav-link">Retail Insurance</a>
+              <a href="insurance_page.html" class="nav-link">Retail Insurance</a>
             </li>
             <li class="nav-item py-0 py-lg-3">
               <a href="insights.html" class="nav-link">Insights</a>
@@ -130,7 +154,7 @@
   <!-- Bannerr -->
   <section id="home">
     <div class="container-fluid">
-      <div class="row corporate_insurance_banner inner_main_page_banner justify-content-center">
+      <div class="row corporate_ins_media_banner inner_main_page_banner justify-content-center">
         <div class="col-lg-10 col-sm-12 py-5 text-white">
           <h1 class="flex-wrap text-center">
             <span class="mb-0 text-shadow-dark heading40 text-light">Media & Entertainment Insurance </span>
@@ -215,7 +239,8 @@
         </div>
         <div class="col-md-5 position-relative reveal fade-right active">
           <div class="bottom-image-border">
-            <img src="img/corporate_Insurance/product_individual_product/section_10.png" alt="Team image" class="img-fluid">
+            <img src="img/corporate_insurance/product_individual_product/section_10.png" alt="Team image"
+              class="img-fluid">
           </div>
           <div class="bottom-corner d-none d-md-block"></div>
         </div>
@@ -236,12 +261,14 @@
           </div>
           <div class="col-md-6">
             <h6 class="text-cust-purple font-20 bullet-sqaure">Streamlined Claims Management</h6>
-            <p class="mt-3">We facilitate seamless claim reporting by guiding clients through the process and efficiently managing claim documentation through our advanced database system.</p>
+            <p class="mt-3">We facilitate seamless claim reporting by guiding clients through the process and
+              efficiently managing claim documentation through our advanced database system.</p>
 
           </div>
           <div class="col-md-6">
             <h6 class="text-cust-purple font-20 bullet-sqaure">Expert Guidance</h6>
-            <p class="mt-3">Our dedicated team provides invaluable insights and support through tailored sessions, empowering clients to navigate the claims process confidently and effectively.</p>
+            <p class="mt-3">Our dedicated team provides invaluable insights and support through tailored sessions,
+              empowering clients to navigate the claims process confidently and effectively.</p>
 
           </div>
           <div class="col-md-6">
@@ -263,21 +290,22 @@
         </div>
         <div class="your-class">
 
-           <!-- start1 -->
-           <div class="">
-            <div class="card mb-4 article-background-img">
-              <span class="date-label ms-4">Reports</span>
+          <!-- start1 -->
+          <div class="">
+            <div class="card mb-4 article-background-img industries-article-bg-20">
+              <span class="date-label ms-4">Document</span>
               <div class="card-body mx-3 mt-5 col-12 col-md-6">
                 <h3 class="font-24 mb-3">'Sardar 2' Stuntman Tragedy</h3>
                 <p class=" font-16 ">As per recent reports, 54-year-old stuntman, Elumalai died after he fell 20 ft
                   from a rostrum on the sets of Sardar 2.
-                   PINC Insurance presents a comprehensive analysis of the fatal
+                  PINC Insurance presents a comprehensive analysis of the fatal
                   stunt accident and its insurance ramifications.
-                  
+
                   Our in-depth case study explores the tragic incident, the medical response, and the critical insurance
                   implications for the film industry.
                 </p>
-                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7224292955858079745" class="cursor-pointer arrow121" target="_blank"></a>
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7224292955858079745"
+                  class="cursor-pointer text-white" target="_blank"><u>Read More</u></a>
               </div>
             </div>
           </div>
@@ -294,8 +322,8 @@
         <div class="card-body py-5">
           <h2 class="font-24  mb-2">Can’t find what you’re looking for?</h2>
           <p class="font-18">Explore Insurance Solutions that keep your risk in check!</p>
-          <button class="btn rounded-pill bg-cust-purple text-white px-4">Search <a onclick="scrollToForm()" class="cursor-pointer arrow-search"
-              target="_blank"></a></button>
+          <button onclick="scrollToForm()"
+            class="btn rounded-pill bg-cust-purple text-white px-4 cursor-pointer ">Search</button>
         </div>
       </div>
     </div>
@@ -331,8 +359,8 @@
                         insurance policies can be complex and
                         confusing. </p>
                       <div class="">
-                        <a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7059398107100254209/"
-                          class="cursor-pointer arrow121 text-white" target="_blank"></a>
+                        <a href="Insuring_What_Matters-A_Deep_Dive_into_Margin_Clause_in_Property_Insurance.html"
+                          class="cursor-pointer text-white" target="_blank"><u>Read More</u></a>
                       </div>
                     </div>
 
@@ -361,8 +389,8 @@
                         India is emerging as a leading hub for conducting
                         research.</p>
                       <div class="">
-                        <a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7062047016561836033/"
-                          class="cursor-pointer arrow121 text-white" target="_blank"></a>
+                        <a href="The_Future_of_Clinical_Trials-India's_Rise_as_a_Global_Hub.html"
+                          class="cursor-pointer text-white" target="_blank"><u>Read More</u></a>
                       </div>
                     </div>
 
@@ -392,8 +420,8 @@
                         India is emerging as a leading hub for conducting
                         research.</p>
                       <div class="">
-                        <a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7069192740260970496/"
-                          class="cursor-pointer arrow121 text-white" target="_blank"></a>
+                        <a href="Why_Risk_Management_is_Key_for_Business_Resilience.html"
+                          class="cursor-pointer text-white" target="_blank"><u>Read More</u></a>
                       </div>
                     </div>
 
@@ -404,7 +432,7 @@
             </div>
           </div>
           <!-- end 3-->
-            <!-- start 4-->
+          <!-- start 4-->
           <div>
             <div class="industry-insights">
               <div class="parent-container-insight">
@@ -424,7 +452,7 @@
                         exploration with Kenya. </p>
                       <div class="">
                         <a href=" https://www.linkedin.com/feed/update/urn:li:activity:7218518232834441216"
-                          class="cursor-pointer arrow121 text-white" target="_blank"></a>
+                          class="cursor-pointer text-white" target="_blank"><u>Read More</u></a>
                       </div>
                     </div>
 
@@ -435,7 +463,7 @@
             </div>
           </div>
           <!-- end 4-->
-            <!-- start 5-->
+          <!-- start 5-->
           <div>
             <div class="industry-insights">
               <div class="parent-container-insight">
@@ -448,14 +476,14 @@
                       Article
                     </div>
                     <div class="insight-container">
-                      <h3 class="heading24 mb-4 mt-cust-6 px-0 text-white">The truth about  diet trends</h3>
+                      <h3 class="heading24 mb-4 mt-cust-6 px-0 text-white">The truth about diet trends</h3>
                       <p class="px-0 mt-2">In the age of social media, diet trends come and
                         go—one day it's keto, the next it's intermittent fasting.
                         But how do you know if these diets are truly right
                         for you?</p>
                       <div class="">
-                        <a href="https://www.linkedin.com/posts/pincinsurance_thinkpinc-pincfamily-diettrends-activity-7234082307047878656-av89?utm_source=share&utm_medium=member_desktop"
-                          class="cursor-pointer arrow121 text-white" target="_blank"></a>
+                        <a href="the_truth_about_diet_trends.html"
+                          class="cursor-pointer text-white"><u>Read More</u></a>
                       </div>
                     </div>
 
@@ -530,7 +558,7 @@
 
     <div class="modal fade" id="thankYouModal" tabindex="-1" role="dialog" aria-labelledby="thankYouModalLabel"
       aria-hidden="true">
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="thankYouModalLabel">Thank You!</h5>
@@ -557,11 +585,10 @@
               <ul class="list-unstyled mb-0">
                 <li class="d-flex mb-3">
                   <i class="fa fa-map-marker text-white"></i>
-
-                  <div class="d-flex flex-column ms-4 text-white ">
+                  <div class="d-flex flex-column ms-4 text-white">
                     <span class="line-height-14">PINC Insurance - 1219, 12th Floor,</span>
                     <span> Maker Chamber V, Nariman Point, </span>
-                    <span> Mumbai,Maharashtra 400021 - India</span>
+                    <span> Mumbai, Maharashtra 400021 - India</span>
                   </div>
                 </li>
                 <li class="d-flex mb-3">
@@ -570,8 +597,9 @@
                 </li>
                 <li class="d-flex ">
                   <i class="fa fa-envelope text-white"></i>
-                  <div class="ms-4"><a class=" text-white secondary1" href="mailto:info@pincinsure.com"
-                      target="_top">info@pincinsure.com</a></div>
+                  <div class="ms-4">
+                    <a class="text-white secondary1" href="mailto:info@pincinsure.com" target="_top">info@pincinsure.com</a>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -579,9 +607,8 @@
           <div class="col-md-7">
             <div class="card-body">
               <h5 class="card-title mt-4 font-24">Newsletter</h5>
-              <p class="text-dark mt-3 font-18">Keep up with our latest news &amp; events. Subscribe to our newsletter
-              </p>
-              <form id="subscriptionForm" action="subscribe.php" method="POST" onsubmit="return validateForm()">
+              <p class="text-dark mt-3 font-18">Keep up with our latest news &amp; events. Subscribe to our newsletter</p>
+              <form id="subscriptionForm" onsubmit="handleFormSubmit(event)">
                 <div class="form-group d-flex text-end mt-4 newsletter">
                   <label for="emailer" class="visually-hidden">Email</label>
                   <input type="email" class="form-control newsletter-form-control" placeholder="Enter your email"
@@ -595,11 +622,29 @@
       </div>
       <!--END NEWSLETTER Section -->
     </div>
+  
+    <!-- Bootstrap Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Thank You!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Thank you for subscribing to our newsletter!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
 
-   <!-- footer start -->
-   <footer class=" pt-5">
+  <!-- footer start -->
+  <footer class=" pt-5">
     <div class="container">
       <!-- Headings in one div -->
       <div class="d-none d-md-block">
@@ -663,7 +708,7 @@
             <li><a href="Office_Package_Insurance.html">Office Package Insurance</a></li>
             <li><a href="Shopkeepers_Package_and_Jewellers_Block.html">Shopkeepers Package and Jewellers Block</a></li>
             <li><a href="Group_Travel_Insurance_Plans.html">Group Travel Insurance Plans</a></li>
-            <li><a href="Media_and_Entertainment_Insurance.html">Media and Entertainment Insurance</a></li>
+            <li><a href="Media_and_Entertainment_Insurance.html"  class="active-nav">Media and Entertainment Insurance</a></li>
           </ul>
         </div>
         <div class="secondary14 col-12 col-md-2">
@@ -674,7 +719,8 @@
             <li><a href="reinsurance.html">Overview</a></li>
             <li><a href="Specie_And_Fine_Arts_Insurance.html">Specie & Fine Arts Insurance</a></li>
             <li><a href="Political_Risk_and_Terrorism_Insurance.html">Political Risk & Terrorism Insurance</a></li>
-            <li><a href="Financial_Lines_and_Casualty_Lines_Insurance.html">Financial Lines & Casualty Lines Insurance</a></li>
+            <li><a href="Financial_Lines_and_Casualty_Lines_Insurance.html">Financial Lines & Casualty Lines
+                Insurance</a></li>
             <li><a href="Reinsurance_Treaty.html">Reinsurance Treaty</a></li>
             <li><a href="Aviation_Industry.html">Aviation Industry</a></li>
             <li><a href="Marine_Hull_Insurance.html">Marine Hull Insurance</a></li>
@@ -689,7 +735,8 @@
             <li><a href="https://www.lloyds.com/" target="_blank">Lloyd’s</a></li>
             <li><a href="https://irdai.gov.in/" target="_blank">IRDAI</a></li>
             <li><a href="https://ibai.org/" target="_blank">IBAI</a></li>
-            <li><a href="https://cdn.pincinsurance.com/document/IRDA_24.02.2024_to_23.02.2027.pdf" target="_blank">License</a></li>
+            <li><a href="https://cdn.pincinsurance.com/document/IRDA_24.02.2024_to_23.02.2027.pdf"
+                target="_blank">License</a></li>
             <li><a href="disclaimer.html">Disclaimer</a></li>
             <li><a href="document/termsofuse.pdf">Terms of Use</a></li>
             <li><a href="privacy_policy.html">Privacy Policy</a></li>
@@ -734,6 +781,8 @@
       centerMode: false,
       centerPadding: "5px",
       slidesToShow: 1,
+      autoplay: true,
+      autoplaySpeed: 1000,
       responsive: [{
           breakpoint: 768,
           settings: {
@@ -754,62 +803,58 @@
         },
       ],
     });
-
-
-    // Optional: Validate the form before submission
-    // Enhanced email validation
     function validateForm() {
-      var email = document.getElementById("emailer").value.trim();
-      console.log("Email:", email); // Debugging line
+        var email = document.getElementById("emailer").value.trim();
+        console.log("Email:", email); // Debugging line
 
-      // More comprehensive email regex pattern
-      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-      if (!emailPattern.test(email)) {
-        console.log("Validation failed: email is invalid");
-        alert("Please enter a valid email address.");
-        return false;
-      }
+        // More comprehensive email regex pattern
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+        if (!emailPattern.test(email)) {
+            console.log("Validation failed: email is invalid");
+            alert("Please enter a valid email address.");
+            return false;
+        }
 
-      console.log("Validation successful");
-      return true;
+        console.log("Validation successful");
+        return true;
     }
 
-    // Function to show the success modal with the user's email
-    function showSuccessModal(email) {
-      document.getElementById('userEmail').textContent = email;
-      $('#successModal').modal('show');
+    // Function to show the success modal
+    function showSuccessModal() {
+        $('#successModal').modal('show');
     }
 
     // Handle form submission
     function handleFormSubmit(event) {
-      event.preventDefault(); // Prevent the default form submission
+        event.preventDefault(); // Prevent the default form submission
 
-      if (!validateForm()) {
-        return; // Stop execution if validation fails
-      }
+        if (!validateForm()) {
+            return; // Stop execution if validation fails
+        }
 
-      var email = document.getElementById('emailer').value;
+        var email = document.getElementById('emailer').value;
 
-      fetch('subscribe.php', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-          },
-          body: new URLSearchParams({
-            'emailer': email
-          })
+        // Simulate a successful subscription (replace this with your actual API call)
+        fetch('subscribe.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: new URLSearchParams({
+                'emailer': email
+            })
         })
         .then(response => response.text())
         .then(text => {
-          if (text.includes('Subscription successful!')) {
-            showSuccessModal(email); // Show modal with user email
-          } else {
-            alert(text); // Show error message if needed
-          }
+            if (text.includes('Subscription successful!')) {
+                showSuccessModal(); // Show modal
+            } else {
+                alert(text); // Show error message if needed
+            }
         })
         .catch(error => {
-          console.error('Error:', error);
-          alert('An error occurred while processing your request.');
+            console.error('Error:', error);
+            alert('An error occurred while processing your request.');
         });
     }
   </script>

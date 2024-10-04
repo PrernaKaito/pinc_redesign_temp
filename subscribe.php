@@ -1,18 +1,22 @@
 <?php
-// Database connection parameters
-$servername = "localhost";
-$username = "root";
-$password = "kaitotech07";
-$database = "Newsletter";
-
 // Include PHPMailer classes
+
+use Dotenv\Dotenv;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-
 require 'vendor/autoload.php';
 
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+
+$servername = $_ENV['DB_HOST'];
+$username = $_ENV['DB_USERNAME'];
+$password = $_ENV['DB_PASSWORD'];
+$database = $_ENV['DB_DATABASE'];
+$port = $_ENV['DB_PORT'];
 // Create connection
-$conn = new mysqli($servername, $username, $password, $database);
+$conn = new mysqli($servername, $username, $password, $database,$port);
 
 // Check connection
 if ($conn->connect_error) {
@@ -28,7 +32,7 @@ if (isset($_POST['emailer']) && !empty($_POST['emailer'])) {
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         
         // Check if the email already exists in the database
-        $stmt = $conn->prepare("SELECT COUNT(*) FROM user WHERE emailer = ?");
+        $stmt = $conn->prepare("SELECT COUNT(*) FROM user_subscribe_newsletter WHERE emailer = ?");
         $stmt->bind_param("s", $email);
         $stmt->execute();
         $stmt->bind_result($count);
@@ -39,7 +43,7 @@ if (isset($_POST['emailer']) && !empty($_POST['emailer'])) {
             echo "This email is already subscribed.";
         } else {
             // Prepare and bind the SQL statement
-            $stmt = $conn->prepare("INSERT INTO user (emailer) VALUES (?)");
+            $stmt = $conn->prepare("INSERT INTO user_subscribe_newsletter (emailer) VALUES (?)");
             if ($stmt) {
                 $stmt->bind_param("s", $email);
 
@@ -50,21 +54,15 @@ if (isset($_POST['emailer']) && !empty($_POST['emailer'])) {
                     // Send "Thank You" email using PHPMailer
                     $mailer = new PHPMailer(true);
                     try {
-                        // SMTP server settings
-                        $smtpHost = 'smtp.office365.com';
-                        $smtpPort = 587;
-                        $smtpUsername = 'info@kaitotech.com';
-                        $smtpPassword = 'Lut63954';
-                        $smtpSecure = 'tls';
                         
                         // PHPMailer settings
                         $mailer->isSMTP();
-                        $mailer->Host = $smtpHost;
+                        $mailer->Host = $_ENV['SMPT_HOST'];
                         $mailer->SMTPAuth = true;
-                        $mailer->Username = $smtpUsername;
-                        $mailer->Password = $smtpPassword;
-                        $mailer->SMTPSecure = $smtpSecure;
-                        $mailer->Port = $smtpPort;
+                        $mailer->Username = $_ENV['SMPT_USERNAME'];
+                        $mailer->Password = $_ENV['SMPT_PASSWORD'];
+                        $mailer->SMTPSecure = $_ENV['SMPT_SECURE'];
+                        $mailer->Port = $_ENV['SMPT_PORT'];
 
                         // Recipients
                         $mailer->setFrom('info@kaitotech.com', 'KaitoTech'); // Replace with your "From" email address

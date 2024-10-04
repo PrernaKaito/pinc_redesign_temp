@@ -1,16 +1,15 @@
 <?php
 
 require_once __DIR__ . '/vendor/autoload.php';
+use Dotenv\Dotenv;
+
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-$smtpHost = 'smtp.office365.com';
-$smtpPort = 587;
-$smtpUsername = 'info@kaitotech.com';
-$smtpPassword = 'Lut63954';
-$smtpSecure = 'tls';
-$receivingEmailAddress = 'prerna@kaitotech.com';
+$receivingEmailAddress = 'marketing@pinc.co.in';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $formType = filter_input(INPUT_POST, 'form_type', FILTER_SANITIZE_STRING);
@@ -31,14 +30,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mailer = new PHPMailer(true);
         try {
             $mailer->isSMTP();
-            $mailer->Host = $smtpHost;
+            $mailer->Host = $_ENV['SMPT_HOST'];
             $mailer->SMTPAuth = true;
-            $mailer->Username = $smtpUsername;
-            $mailer->Password = $smtpPassword;
-            $mailer->SMTPSecure = $smtpSecure;
-            $mailer->Port = $smtpPort;
+            $mailer->Username = $_ENV['SMPT_USERNAME'];
+            $mailer->Password = $_ENV['SMPT_PASSWORD'];
+            $mailer->SMTPSecure = $_ENV['SMPT_SECURE'];
+            $mailer->Port = $_ENV['SMPT_PORT'];
 
-            $mailer->setFrom($smtpUsername, $name);
+            $mailer->setFrom($_ENV['SMPT_USERNAME'], $name);
             $mailer->addAddress($receivingEmailAddress);
             $mailer->isHTML(true);
             $mailer->Subject = 'Business Enquiry';
@@ -71,15 +70,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $mailer = new PHPMailer(true);
         try {
-            $mailer->isSMTP();
-            $mailer->Host = $smtpHost;
-            $mailer->SMTPAuth = true;
-            $mailer->Username = $smtpUsername;
-            $mailer->Password = $smtpPassword;
-            $mailer->SMTPSecure = $smtpSecure;
-            $mailer->Port = $smtpPort;
 
-            $mailer->setFrom($smtpUsername, $fullname);
+            $mailer->isSMTP();
+            $mailer->Host = $_ENV['SMPT_HOST'];
+            $mailer->SMTPAuth = true;
+            $mailer->Username = $_ENV['SMPT_USERNAME'];
+            $mailer->Password = $_ENV['SMPT_PASSWORD'];
+            $mailer->SMTPSecure = $_ENV['SMPT_SECURE'];
+            $mailer->Port = $_ENV['SMPT_PORT'];
+
+            $mailer->setFrom($_ENV['SMPT_USERNAME'], $fullname);
             $mailer->addAddress($receivingEmailAddress);
             $mailer->isHTML(true);
             $mailer->Subject = 'Business Enquiry';

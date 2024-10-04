@@ -1,0 +1,1474 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+}
+
+h6,
+.h6,
+h5,
+.h5,
+h4,
+.h4,
+h3,
+.h3,
+h2,
+.h2,
+h1,
+.h1 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Custom colors */
+.text-cust-primary {
+    color: #E1056D;
+}
+.text-cust-purple{
+    color: #4256A6;
+}
+.bg-cust-blue {
+    background-color: #223686;
+}
+.bg-cust-purple{
+    background-color: #4256A6;
+}
+.bg-cust-secondary{
+    background-color: #F8F8F8;
+}
+.text-cust-dark{
+    color: #000;
+}
+
+/* .bg-cust-blue-gradiant{
+    background: linear-gradient(112deg, #4256A6 0%, #0F2375 100%);
+}
+.bg-cust-pink-gradiant{
+    background:linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 1) -6%,
+        rgba(250, 213, 230, 0.5) 12%, 
+        rgba(225, 5, 109, 1) 100%
+    )
+} */
+
+.bg-cust-blue-gradiant {
+    background: linear-gradient(112deg, #4256A6 0%, #0F2375 100%);
+    transition: background 0.3s ease; /* Smooth transition */
+}
+
+.bg-cust-blue-gradiant:hover {
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 1) -6%,
+        rgba(250, 213, 230, 0.5) 12%, /* Adjusted pink with 50% transparency */
+        rgba(225, 5, 109, 1) 100%
+    );
+}
+
+/* font Size */
+.font-16{
+    font-size: 14px;
+}
+.font-14{
+    font-size: 12px;
+}
+.font-18{
+    font-size: 18px;
+}
+.font-20{
+    font-size: 20px;
+}
+.font-22{
+    font-size: 22px;
+}
+.font-24{
+    font-size: 24px;
+}
+.font-26{
+    font-size: 26px;
+}
+.font-30{
+    font-size: 30px;
+}
+.heading18{
+    font-size: 18px;
+    color:#1C1C1C
+}
+.secondary18{
+    font-size: 18px;
+    color:#282828
+}
+.heading22 {
+    font-size: 22px;
+}
+.heading24{
+    font-size: 24px;
+    color:#282828
+}
+.heading26{
+    font-size: 26px;
+    color:#282828
+}
+.heading40 {
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.font-48 {
+    font-size: 48px;
+}
+
+.fw-medium {
+    font-weight: 400;
+}
+
+.fw-semibold {
+    font-weight: 600;
+}
+
+.mt-cust-6{
+margin-top:4rem;
+}
+
+/* Utility */
+.line-height-14{
+    line-height:14px;
+}
+.line-height-32{
+    line-height:32px;
+}
+.btn-cust-primary{
+    background-color: #e1056d;
+    color: #ffffff;
+}
+.btn-cust-primary:hover{
+    background-color: #622240
+    ;
+    color: #ffffff;
+}
+.btn-outline-primary{
+    border-color: #e1056d;
+    color: #e1056d;
+}
+.form-control:focus {
+    color: #ffffff;
+    background-color: #fff;
+    border-bottom-color: #E1056D;
+    outline: 0;
+    box-shadow: none;
+}
+.btn-outline-primary:hover {
+    color: #ffffff;
+    background-color: #E1056D;
+    border-color: #E1056D;
+}
+.btn-cust-blue{
+    background-color: #4256A6;
+    color: #fff;
+    border-color: #4256A6;
+}
+.btn-cust-blue:hover{
+    background-color: #E1056D;
+    color: #fff;
+    border-color: #E1056D;
+}
+.form-control {
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    border-radius: 0%;
+    padding: .375rem 0;
+}
+.form-floating>.form-control, .form-floating>.form-select {
+    height: calc(3.2rem + 2px);
+}
+
+.breadcrumb-item.active {
+    color: #E1056D;
+}
+.breadcrumb {
+    font-size:14px;
+} 
+.ul-list-points{
+    font-size:18px;
+    line-height: 27px;
+    font-weight: 600;
+    font-style: italic;
+    list-style: square;
+    padding-left: 1.5rem;
+}
+.ul-list-points li{
+    margin-top:15px;
+}
+.ol-list-points{
+    font-size:18px;
+    line-height: 27px;
+    font-weight: 600;
+    font-style: italic;
+    padding-left: 1.5rem;
+}
+.ol-list-points li{
+    margin-top:15px;
+}
+.bullet-sqaure {
+    position: relative;
+    padding-left: 20px; /* Adds some space for the bullet */
+}
+
+.bullet-sqaure::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%; /* Align it vertically */
+    transform: translateY(-50%); /* Centers the bullet */
+    width: 10px;
+    height: 10px;
+    background-color: #4256A6; /* Change to the color you want */
+}
+
+/* END Utility */
+
+/* Navbar */
+.sticky-header{
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    border-bottom: 1px solid grey;
+    z-index: 9999;
+}
+.submenu.dropdown-menu {
+    background-color: #FBE8D8db;
+    padding: 10px 35px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    border-radius: 0;
+    cursor: pointer;
+    border: 0;
+    color: #000;
+}
+
+.submenu.dropdown-menu li {
+    list-style-type: square;
+}
+
+::marker {
+    color: #E1056D;
+}
+
+.submenu.dropdown-item {
+    font-size: 14px;
+    padding: .40rem 0;
+    color: #000;
+}
+
+.nav-item.dropdown:hover .dropdown-menu,
+.nav-item.dropdown .dropdown-menu:hover {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    margin-top: 1.5px;
+}
+
+.nav-item.dropdown {
+    border-bottom: 3px solid rgb(255, 255, 255);
+}
+
+.nav-item.dropdown:hover {
+    border-bottom: 3px solid #E1056D;
+}
+.nav-item:hover {
+    border-bottom: 3px solid #E1056D;
+}
+.navbar-light .navbar-nav .nav-item.dropdown:hover .nav-link {
+    color: #E1056D;
+}
+
+.active-nav {
+    border-bottom:2px solid #e1056d
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-size: 15px;
+}
+
+.submenu.dropdown-item.active,
+.submenu.dropdown-item:active,
+.submenu.dropdown-item:hover {
+    color: #E1056D;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: rgb(255 255 255 / 10%);
+}
+
+/* Banner */
+.banner-section {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+}
+
+.banner-btn {
+    display: inline-block;
+    width: 230px;
+    font-style: italic;
+    background-color: #e1056d;
+    border-radius: 0%;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 600;
+    padding: .375rem .75rem;
+    text-align: center;
+    line-height: 1.5;
+    vertical-align: middle;
+}
+
+
+
+.banner-heading {
+    font-weight: 600;
+    font-style: italic;
+}
+
+.cust-border-blue{
+    border-color: #4256A6;
+}
+/* END Banner */
+
+
+/* First Section */
+.main-section {
+    background-color: rgba(251, 232, 216, 0.3);
+}
+
+/* .main-container {
+    border-left: 1px solid #4256A6;
+    border-right: 1px solid #4256A6;
+} */
+
+.first-section-content {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.corner {
+    position: absolute;
+    top: -15px;
+    left: 0px;
+    width: 50%;
+    height: 39%;
+    background-color: #4256a6;
+    border-bottom-right-radius: 5px;
+    z-index: 1;
+}
+
+.image-border {
+    z-index: 9;
+    position: relative;
+}
+
+/* .bottom-corner {
+    position: absolute;
+    bottom: -15px;
+    right: 0px;
+    width: 92%;
+    background-color: #E1116D;
+    z-index: 1;
+} */
+
+/* .bottom-image-border{
+    z-index: 9;
+    position: relative; 
+} */
+
+/* END first Section */
+
+/* Second Section */
+.second-section-container {
+    background-image: url(../img/industries/world-map.png);
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat
+}
+
+.second-section-list-item {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+
+}
+
+.second-section-list .fa.fa-square {
+    font-size: 13px;
+}
+
+/* End  Second Section */
+
+/* fourth Cotainer */
+.fourth-section{
+    background-color: #F1F1F1;
+}
+.ins-sol-card {
+    border-left: 3px solid #4256A6;
+    border-radius: 0;
+    padding-left: 15px;
+    box-sizing: border-box;
+    color:#1C1C1C;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+.ins-sol-card:hover {
+    background-color: #4256A6;
+    border-left: 10px solid #e1056d;
+    padding-left: 9px;
+    color: #fff;
+}
+.ins-sol-card:hover h1 , .ins-sol-card:hover .arrow121{
+    color: #fff;
+}
+.arrow121::before {
+    content: "→";
+    display: inline-block;
+}
+
+.arrow121 {
+    display: inline-block;
+    color: #282828;
+    font-size: 25px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+.arrow121:hover {
+    transform: scaleX(1.5);
+    color: #ffff;
+}
+/* END Fourth Container */
+
+/* START NEWSLETTER  */
+/* .newsletter-container{
+    border-left: 1px solid #4256A6;
+    border-right: 1px solid #4256A6;
+} */
+
+/* START Fifth Container */
+.ind-expeties-main-container {
+    background: linear-gradient(to left, #95ABF5, #4256A6);
+}
+
+.card-exp {
+    border-radius: 0;
+    background: linear-gradient(to right, #e1056d, #faaacc);
+    border: none;
+}
+/* END Fifth Container */
+
+/* START: SIXTH Section */
+.sixth-section{
+    background-color: #F8F8F8;
+}
+.parent-container-insight {
+    position: relative;
+    overflow: hidden;
+    padding-top: 20px;  
+}
+
+.one-insight {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 100%;
+    z-index: 2;
+}
+.two-insight .date {
+    position: absolute;
+    top: 0px;
+    background-color: #e1056d;
+    padding: 20px 20px;
+    border-radius: 0;
+}
+.your-class .slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 13px;
+    padding: 0;
+    cursor: pointer;
+}
+.your-class .slick-dots {
+    position: absolute;
+    bottom: 1px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+.slick-dots li button:before{
+    font-size: 12px !important;
+}
+.slick-dots li.slick-active button:before {
+    color: #4256A6 !important;
+}
+.two-insight {
+    position: relative;
+    background: #4256A6;
+    z-index: 1;
+    margin-top: 5%;
+    padding: 40px 26% 44px 10%;
+    box-sizing: border-box;
+    box-shadow: 10px 7px 15px rgba(0, 0, 0, 0.2);
+}
+/* END: SIXTH Section */
+/* START GET IN TOUCH */
+.get-in-touch-img{
+        position: absolute;
+        left: 10%;
+        width: 100%;
+        z-index: 2;
+}
+.get-in-touch-form-container {
+    position: relative;
+    background: #4256A6;
+    z-index: 1;
+    margin-top: 7%;
+    padding: 18px 72px 44px 12%;
+    box-sizing: border-box;
+}
+
+/* END GET IN TOUCH */
+.newsletter input{
+        border-left: 0;
+        border-right:0;
+        border-top: 0;
+        border-radius: 0;
+        padding-left:0;
+}
+.newsletter-form-control:focus{
+    color: #4256a6 !important;
+
+}
+/* END NEWSLETTER */
+
+/* Footer */
+footer{
+    background-color:#FEF8F3;
+}
+footer ul li{
+    font-size: 12px;
+    margin-top:10px;
+}
+footer ul li a {
+    color:#000000;
+}
+footer ul li a:hover{
+    color:#E1056D;
+}
+.bottom-footer-content{
+    font-size: 12px;
+}
+/* Footer END */
+
+/* ------------------------START Insurance Banneer--------------------------- */
+
+.inner_main_page_banner{
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+.insurance_banner {
+    background-image: url(../img/insurancebanner/insur1.jpg);
+}
+
+.corporate_insurance_banner{
+    background-image: url(../img/corporate_insurance/main_banner.png);
+}
+.contactUs_banner{
+    background-image: url(../img/contactus/main_banner.png);
+}
+.aboutUs_banner{
+    background-image: url(../img/aboutUs/main_banner.png);
+}
+.corporate_ins_property_banner{
+    background-image: url(../img/corporate_insurance/product_individual_product/property-top.png);
+}
+.corporate_ins_liability_banner{
+    background-image: url(../img/corporate_insurance/product_individual_product/liability-top.png);
+}
+.corporate_ins_marine_banner{
+    background-image: url(../img/corporate_insurance/product_individual_product/marine-top.png);
+}
+.corporate_ins_trade_credit_banner{
+    background-image: url(../img/corporate_insurance/product_individual_product/trade-top.png);
+}
+.corporate_ins_media_banner{
+    background-image: url(../img/corporate_insurance/product_individual_product/media-top.png);
+}
+.corporate_ins_eb_banner{
+    background-image: url(../img/corporate_insurance/product_individual_product/eb-top.png);
+}
+.corporate_ins_motor_fleet_banner{
+    background-image: url(../img/corporate_insurance/product_individual_product/motor-top.png);
+}
+.corporate_ins_ofc_package_banner{
+    background-image: url(../img/corporate_insurance/product_individual_product/office-top.png);
+}
+.corporate_ins_shopkeeper_banner{
+    background-image: url(../img/corporate_insurance/product_individual_product/shop-top.png);
+}
+.corporate_ins_group_travel_banner{
+    background-image: url(../img/corporate_insurance/product_individual_product/travel-top.png);
+}
+/* -------------------------END Insurance Banner -------------------------- */
+
+/* ------------------------INDUSTRIES PAGE ---------------------------- */
+
+.idustries_banner {
+    background-image: url(../img/industries/main_banner.png);
+}
+.industries_product_page_banner{
+    background-image: url(../img/industries/product_page_banner.png);
+}
+.insight_page_banner{
+    background-image: url(../img/insight/main_banner.png);
+}
+/* Overlay */
+.ind-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    border: none;
+    width: 100%;
+    height: 99%;
+}
+
+.card-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(66, 86, 166, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white;
+    border-radius: 0;
+}
+/* .ind-text-wrapper {
+    margin-top:12rem;
+} */
+.ind-title {
+    font-family: "Poppins";
+    color: #fff;
+    font-size: 1.25rem;
+    position: absolute;
+    bottom: 30px;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease;
+}
+.ind-card:hover .ind-title {
+    opacity: 0;
+}
+.ind-card:hover .card-img-overlay {
+    opacity: 1;
+}
+.arrow {
+    display: inline-block;
+    /* margin-top: 2px; */
+    color: #ffff;
+    font-size: 40px;
+    transition: transform 0.3s ease;
+    transform-origin: left center;
+}
+.arrow::before {
+    content: "→";
+    display: inline-block;
+}
+.arrow:hover {
+    transform: scaleX(1.5); /* Extend width on hover */
+}
+.arrow-search {
+    display: inline-block;
+    margin-top: -6px;
+    color: #ffff;
+    font-size: 27px;
+    transition: transform 0.3s ease;
+    transform-origin: left center;
+}
+.arrow-search::before {
+    content: "→";
+    display: inline-block;
+}
+.arrow-search:hover {
+    transform: scaleX(1.5); /* Extend width on hover */
+    color: #fff;
+}
+
+.industries_infrastructure_banner{
+    background-image: url(../img/industries/product_individual_product/infrastructure-top.png);
+}
+.industries_pharma_banner{
+    background-image: url(../img/industries/product_individual_product/pharma-top.png);
+}
+.industries_plastic_banner{
+    background-image: url(../img/industries/product_individual_product/plastic-top.png);
+}
+.industries_startup_banner{
+    background-image: url(../img/industries/product_individual_product/startups-top.png);
+}
+.industries_real_estate_banner{
+    background-image: url(../img/industries/product_individual_product/real-top.png);
+}
+.industries_chemical_banner{
+    background-image: url(../img/industries/product_individual_product/chemical-top.png);
+}
+.industries_logistic_banner{
+    background-image: url(../img/industries/product_individual_product/logistics-top.png);
+}
+.industries_textile_banner{
+    background-image: url(../img/industries/product_individual_product/textile-top.png);
+}
+.industries_solar_banner{
+    background-image: url(../img/industries/product_individual_product/solar-top.png);
+}
+/* ------------------------END INDUSTRIES PAGE ------------------------- */
+
+/* ------------------------START ReInsurance Banneer--------------------------- */
+
+.reinsurance_banner {
+    background-image: url(../img/reinsurance/main_banner.png);
+}
+.risk_management_banner {
+    background-image: url(../img/risk_management/main_banner.png);
+}
+.claim_management_banner {
+    background-image: url(../img/claim_management/main_banner.png);
+}
+.wellness_banner {
+    background-image: url(../img/wellness/main_banner.png);
+}
+.retail_insurance_banner{
+    background-image: url(../img/retail_insurance/main_banner.png);
+}
+.reinsurance_specie_art_banner {
+    background-image: url(../img/reinsurance/product/arts-top.png);
+}
+.reinsurance_terrorism_banner {
+    background-image: url(../img/reinsurance/product/Terrorism-top.png);
+}
+.reinsurance_aviation_banner {
+    background-image: url(../img/reinsurance/product/Aviation-top.png);
+}
+.reinsurance_financial_banner {
+    background-image: url(../img/reinsurance/product/Financial-top.png);
+}
+.reinsurance_financial_banner {
+    background-image: url(../img/reinsurance/product/Financial-top.png);
+}
+.reinsurance_financial_banner {
+    background-image: url(../img/reinsurance/product/Financial-top.png);
+}
+.reinsurance_treaty_top_banner {
+    background-image: url(../img/reinsurance/product/Treaty-top.png);
+}
+.reinsurance_marine_hull_banner {
+    background-image: url(../img/reinsurance/product/marin-top.png);
+}
+.reinsurance_property_top_banner {
+    background-image: url(../img/reinsurance/product/Property-top.png);
+}
+/* -------------------------END ReInsurance Banner -------------------------- */
+
+
+/* -------------------ABOUT US ----------------------- */
+
+  
+  .card-container {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    perspective: 1000px;
+  }
+  
+  .abt-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+  }
+  
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .card-front {
+    background-color: #fff;
+  }
+  
+  .card-back {
+    background: linear-gradient(112deg, #4256A6 0%, #2943AA 100%);
+    transform: rotateY(180deg);
+    padding: 20px;
+  }
+  
+  .card-container:hover .card {
+    transform: rotateY(180deg);
+  }
+  
+  .abt-img {
+    width: 100%;
+    height: 311px;
+    object-fit: cover;
+  }
+  
+  .abt-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  /* .abt-small-title {
+    font-size: 14px;
+    font-weight: normal;
+    color: gray;
+  } */
+  
+  .profile-description {
+    font-size: 14px;
+    color: #ffffff;
+    padding: 10px;
+  }
+  
+/* .abt-card {
+    position: relative;
+    overflow: hidden;
+}  */
+.abt-small-title {
+    font-family: "Poppins";
+    color: #fff;
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+} 
+.col-md-3:nth-child(11)  .abt-small-title{
+    bottom: 7px;
+}
+
+/* .abt-card-img-overlay {
+    background: rgba(8, 31, 136, 0.6);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+} */
+.abt-text-wrapper {
+    padding: 20px;
+    text-align: start;
+}
+.abt-text {
+    margin: 0;
+    transition: opacity 0.3s ease;
+}
+
+.abt-arrow {
+    margin-top: 10px;
+    color: #fff;
+    transition: opacity 0.3s ease;
+}
+
+/* Title and small title */
+.abt-title, .abt-small-title {
+    transition: opacity 0.3s ease;
+    margin: 0; /* Adjust margin as needed */
+}
+
+.abt-title {
+    font-family: "Poppins";
+    color: #fff;
+    font-size: 24px;
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+}
+
+
+.abt-small-title {
+    font-family: "Poppins";
+    color: #fff;
+    position: absolute;
+    bottom: 20px;
+    font-size: 16px;
+    left: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover Effects */
+.abt-card:hover .abt-card-img-overlay {
+    opacity: 1;
+}
+
+.abt-card:hover .abt-title, .abt-card:hover .abt-small-title {
+    opacity: 0;
+}
+
+/* Profile */
+.profile-main-name{
+    font-size: 13px;
+}
+
+.profile-main-designation{
+    font-size:10px;
+}
+
+.profile-name{
+    font-size:21px;
+}
+
+.profile-designation{
+     font-size:18px;
+}
+
+.profile-description{
+    font-size:14px;
+}
+
+/* value section */
+.value-background {
+    background-image: url(../img/values.jpeg);
+}
+
+.value-card{
+    height:599px;
+}
+
+
+/* vision mission */
+
+.vision-mission-container{
+    position: absolute;
+    /* top:12rem; */
+    bottom: 12rem;
+}
+.vision-mission-img-div{
+    position: absolute;
+    left: -30px;
+    z-index: -1;
+    width:100%;
+}
+.vision-mission-img-div img {
+    width:100%;
+}
+/* ---------------END ABOUT US -------------------------- */
+
+/* -----------CONTACT US START------------------- */
+.contact-form-container{
+    background-color: #FEF8F3;
+}
+.cust-form-control:focus {
+    color: #363535 !important;
+}
+.offices-container .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #e1056d;
+    background-color: #fff;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-bottom: 1px solid #e1056d;
+}
+.offices-container .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    border-color: unset;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-top: 1px solid transparent;
+    color: #e1056d;
+    border-bottom: 1px solid #e1056d;
+}
+
+/* ------------CONTACT US END */
+
+
+/* ------------------Insurance Product START--------------------- */
+.article-background-img{
+        /* background-image: url(../img/risk_management/Document-banner.png); */
+        height: 400px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-bottom: 5em;
+        border-radius: 0;
+        color: #fff;
+}
+.article-background-img h3{
+    color: #fff;
+}
+.article-background-img .arrow121{
+    color: #fff;
+}
+.article-background-img .date-label{
+    background-color: #e1056d;
+    width:181px;
+    padding:12px;
+    font-size:14px;
+    text-align: center;
+    color:#fff;
+    font-style: italic;
+}
+
+/* ----------------Insurance Product END */
+/* article  wellness*/
+.article-bg-common{
+    background-image: url(../img/risk_management/Document-banner.png);
+}
+.document-bg-common{
+    background-image: url(../img/risk_management/Document-banner.png);
+}
+.wellness-bg-1{
+    background-image: url(../img/wellness/Understanding_The_Science_of_Late-Night_Cravings.png);
+}
+.wellness-bg-2{
+    background-image: url(../img/wellness/Unlocking_the_Secrets_to_Healthy_and_Beautiful_Hair.png);
+}
+.wellness-bg-3{
+    background-image: url(../img/wellness/Unmasking_the_Sneaky_Sugar_Sources.png);
+}
+.wellness-bg-4{
+    background-image: url(../img/wellness/Navigating_the_Bread_Aisle.png);
+}
+.wellness-bg-5{
+    background-image: url(../img/wellness/Unlocking_the_Mystery_of_Cooking_Oils.png);
+}
+.wellness-bg-6{
+    background-image: url(../img/wellness/Mindful_Eating_Demystified.png);
+}
+.wellness-bg-7{
+    background-image: url(../img/wellness/Mind_over_matter_How_Mindfulness_builds_immunity.png);
+}
+/*  */
+.risk-bg-1{
+    background-image: url(../img/risk_management/);
+}
+.risk-bg-2{
+    background-image: url(../img/risk_management/);
+}
+.risk-bg-3{
+    background-image: url(../img/risk_management/);
+}
+.risk-bg-4{
+    background-image: url(../img/risk_management/);
+}
+.risk-bg-5{
+    background-image: url(../img/risk_management/);
+}
+.risk-bg-6{
+    background-image: url(../img/risk_management/);
+}
+.risk-bg-7{
+    background-image: url(../img/risk_management/);
+}
+/*  */
+
+.industries-article-bg-1{
+    background-image: url(../img/industries/articles/your_essential_guide.png);
+}
+.industries-article-bg-2{
+    background-image: url(../img/industries/articles/Insuring_What_Matters.png);
+}
+.industries-article-bg-3{
+    background-image: url(../img/industries/articles/baby_care.png);
+}
+.industries-article-bg-4{
+    background-image: url(../img/industries/articles/rajkot.png);
+}
+.industries-article-bg-5{
+    background-image: url(../img/industries/articles/Chemical_Factory_Tragedy.png);
+}
+.industries-article-bg-6{
+    background-image: url(../img/industries/articles/The_Future_of_Clinical_Trials.png);
+}
+.industries-article-bg-7{
+    background-image: url(../img/industries/articles/AI_Clinical_Trials_Disrupting.png);
+}
+.industries-article-bg-8{
+    background-image: url(../img/industries/articles/Astrazeneca_Vaccine_Recall.png);
+}
+.industries-article-bg-9{
+    background-image: url(../img/industries/articles/proactive_preparedness.png);
+}
+.industries-article-bg-10{
+    background-image: url(../img/industries/articles/plastic.png);
+}
+.industries-article-bg-11{
+    background-image: url(../img/industries/articles/sme.png);
+}
+.industries-article-bg-12{
+    background-image: url(../img/industries/articles/risk_management.png);
+}
+.industries-article-bg-13{
+    background-image: url(../img/industries/articles/kuwait_building_fire.png);
+}
+.industries-article-bg-14{
+    background-image: url(../img/industries/articles/fire_alarm.png);
+}
+.industries-article-bg-15{
+    background-image: url(../img/industries/articles/bcp.png);
+}
+.industries-article-bg-16{
+    background-image: url(../img/industries/articles/Patiala_Birthday_Cake_Mishap.png);
+}
+.industries-article-bg-17{
+    background-image: url(../img/industries/articles/Insurance_Impacts_of_Red_Sea_Attacks.png);
+}
+.industries-article-bg-18{
+    background-image: url(../img/industries/articles/Baltimore_Disaster_Updates.png);
+}
+.industries-article-bg-19{
+    background-image: url(../img/industries/articles/Unlock_your_Trade_Potential.png);
+}
+.industries-article-bg-20{
+    background-image: url(../img/industries/articles/sardar_2.png);
+}
+.industries-article-bg-21{
+    background-image: url(../img/industries/articles/Faster_Cashless_Approvals.png);
+}
+.industries-article-bg-22{
+    background-image: url(../img/industries/articles/No_Age_Limit_for_Health_Insurance.png);
+}
+.industries-article-bg-23{
+    background-image: url(../img/industries/articles/cashless_everywhere.png);
+}
+.industries-article-bg-24{
+    background-image: url(../img/industries/articles/two_wheeler_monsoon.png);
+}
+.industries-article-bg-25{
+    background-image: url(../img/industries/articles/tanzanias_vibrant.png);
+}
+.industries-article-bg-26{
+    background-image: url(../img/industries/articles/kenyas_insurance_industry.png);
+}
+.industries-article-bg-27{
+    background-image: url(../img/industries/articles/navigating_flood.png);
+}
+.industries-article-bg-28{
+    background-image: url(../img/industries/articles/static_electricity.png);
+}
+.industries-article-bg-29{
+    background-image: url(../img/industries/articles/impact_of_thermography.png);
+}
+.industries-article-bg-30{
+    background-image: url(../img/industries/articles/practices_of_HAZOP.png);
+}
+.industries-article-bg-31{
+    background-image: url(../img/industries/articles/lockout_tagout.png);
+}
+.industries-article-bg-32{
+    background-image: url(../img/industries/articles/safeguarding_against_electrical_hazards.png);
+}
+.industries-article-bg-33{
+    background-image: url(../img/industries/articles/national_safety.png);
+}
+.industries-article-bg-34{
+    background-image: url(../img/industries/articles/textile_industry.png);
+}
+.industries-article-bg-35{
+    background-image: url(../img/industries/articles/mitigating_fire_risks.png);
+}
+/* -----------------START Insight Page--------------- */
+.insight-card {
+    position: relative;
+    overflow: hidden;
+    color: white;
+    border-radius: 0;
+}
+.insight-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* background: rgba(0, 0, 0, 0.5); */
+    z-index: 0;
+}
+.insight-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.insight-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent); */
+    padding: 15px;
+}
+.badge {
+    position: absolute;
+    /* left: 35px; */
+    left: 15px;
+    background-color: #c2185b;
+    color: white;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 0;
+}
+
+.insight-title {
+    font-size: 18px;
+    margin-bottom: 60px;
+    color: #FEF8F3;
+    line-height: 26px;
+}
+
+.insight-navbar .nav-item:hover{
+    border-bottom: 0 !important;
+}
+.insight-navbar .nav-link-insight.active{
+    background-color: #fff !important;
+    color: #e1056d !important;
+    border-bottom: 1px solid #e1056d;
+    border-radius: 0;
+}
+.article_thruth_about_diet_banner{
+    background-image: url(../img/insight/banner/article/thruth_about_diet.png);
+}
+.article_national_safety_banner{
+    background-image: url(../img/insight/banner/article/national_safety.png);
+}
+.article_understanding_science_banner{
+    background-image: url(../img/insight/banner/article/understanding_the_science.png);
+}
+.article_secrets_of_healthy_hair_banner{
+    background-image: url(../img/insight/banner/article/unlocking_the_secrets_to_healthy_hair.png);
+}
+.article_unmasking_the_sneaky_sugar_sources_banner{
+    background-image: url(../img/insight/banner/article/Unmasking_the_Sneaky_Sugar_Sources.png);
+}
+.article_ring_in_2024_with_peace_of_mind_banner{
+    background-image: url(../img/insight/banner/article/ring_in_2024_with_peace_of_mind.png);
+}
+.article_Navigating_the_Bread_Aisle_banner{
+    background-image: url(../img/insight/banner/article/Navigating_the_Bread_Aisle.png);
+}
+.article_Unlocking_the_Mystery_of_Cooking_Oils_banner{
+    background-image: url(../img/insight/banner/article/Unlocking_the_Mystery_of_Cooking_Oils.png);
+}
+.article_AI_Clinical_Trials_Disrupting_banner{
+    background-image: url(../img/insight/banner/article/AI_Clinical_Trials_Disrupting.png);
+}
+.article_Mindful_Eating_Demystified_banner{
+    background-image: url(../img/insight/banner/article/Mindful_Eating_Demystified.png);
+}
+.article_mindover_matter_banner{
+    background-image: url(../img/insight/banner/article/Mind_over_matter_How_Mindfulness_builds_immunity.png);
+}
+.article_sme_banner{
+    background-image: url(../img/insight/banner/article/sme.png);
+}
+.article_your_essential_guide_banner{
+    background-image: url(../img/insight/banner/article/your_essential_guide.png);
+}
+.article_risk_management_banner{
+    background-image: url(../img/insight/banner/article/risk_management.png);
+}
+.article_The_Future_of_Clinical_Trials_banner{
+    background-image: url(../img/insight/banner/article/The_Future_of_Clinical_Trials.png);
+}
+.article_insuring_what_matters_banner{
+    background-image: url(../img/insight/banner/article/Insuring_What_Matters.png);
+}
+/* -----------------END Insight Page------------------ */
+
+
+/* ---------------article main page ---START ----------------------- */
+.article-main-section{
+    background-image: url(../img/article/articlebanner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.article-profile-img img{
+    width:185px;
+    height:185px;
+}
+.article-profile-designation{
+    font-style: italic;
+    font-size: 18px;
+}
+.article-profile-name{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+/* ----------------article main page -END ---------------------------*/
+
+/* ISNP Page START */
+.isnp-container .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background: #e1056d !important;
+}
+.isnp-container .nav-item:hover {
+    border-bottom: 0px;
+}
+
+.isnp-container table td{
+    width: 20%;
+    border-collapse: collapse;
+    line-height: 25px;
+}
+/* ISNP Page END */
+
+/* Media Query */
+@media (min-width: 1441px) {
+   
+}
+@media (min-width: 1440px) {
+    .navbar-light .navbar-nav .nav-link {
+        font-size: 16px;
+    }
+
+    .corner {
+        height: 90%;
+    }
+
+    /* .bottom-corner{
+        height: 90%;
+    } */
+    .two-insight {
+        margin-top: 9% !important;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    /* Navbar */
+    .submenu.dropdown-menu {
+        width: 629px;
+    }
+
+    .submenu-reinsurance.dropdown-menu{
+        width:400px;
+    }
+
+    .nav-item.dropdown:hover .dropdown-menu,
+    .nav-item.dropdown .dropdown-menu:hover {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        margin-top: 17.5px;
+    }
+
+    .corner {
+        height: 72%;
+    }
+    /* .bottom-corner{
+        height: 97%;
+    } */
+
+    .second-section-list-item {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 27px;
+    }
+    .font-16 {
+        font-size: 16px;
+    }
+    .font-14 {
+        font-size: 14px;
+    }
+    footer ul li {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 768px){
+    .second-section-container {
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+        background-size: contain;
+    }
+    .two-insight {
+        position: relative;
+        background: #4256A6;
+        z-index: 1;
+        margin-top: 5%;
+        padding: 40px 44px 44px 10%;
+        box-sizing: border-box;
+        box-shadow: 10px 7px 15px rgba(0, 0, 0, 0.2);
+    }
+    /* .ind-card {
+        width: 80%;
+    } */
+}
