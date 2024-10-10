@@ -10,6 +10,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 $receivingEmailAddress = 'marketing@pinc.co.in';
+// $receivingEmailAddress = 'nikhil@kaitotech.com';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $formType = filter_input(INPUT_POST, 'form_type', FILTER_SANITIZE_STRING);
@@ -50,6 +51,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ";
             $mailer->send();
             http_response_code(200);
+            echo 'Message sent successfully!';
+            $mailer->clearAddresses();  // Clear previous recipient
+            $mailer->addAddress($email);  // User's email
+            $mailer->Subject = 'Thank you!';
+            $mailer->Body = "
+                <p>Thank you, $name!</p>
+                <p>Shortly, we will contact you.</p>
+            ";
+            $mailer->send();
             echo 'Message sent successfully!';
         } catch (Exception $e) {
             http_response_code(500);
@@ -92,6 +102,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ";
             $mailer->send();
             http_response_code(200);
+            echo 'Message sent successfully!';
+            $mailer->clearAddresses();  // Clear previous recipient
+            $mailer->addAddress($email);  // User's email
+            $mailer->Subject = 'Thank you!';
+            $mailer->Body = "
+                <p>Thank you, $name!</p>
+                <p>Shortly, we will contact you.</p>
+            ";
+            $mailer->send();
             echo 'Message sent successfully!';
         } catch (Exception $e) {
             http_response_code(500);

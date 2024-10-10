@@ -37,6 +37,10 @@ h1,
 .text-cust-dark{
     color: #000;
 }
+u{
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
 
 /* .bg-cust-blue-gradiant{
     background: linear-gradient(112deg, #4256A6 0%, #0F2375 100%);
@@ -290,7 +294,7 @@ margin-top:4rem;
 .navbar-light .navbar-nav .nav-link {
     font-size: 15px;
 }
-
+ 
 .submenu.dropdown-item.active,
 .submenu.dropdown-item:active,
 .submenu.dropdown-item:hover {
@@ -357,6 +361,11 @@ margin-top:4rem;
     text-align: center;
     line-height: 1.5;
     vertical-align: middle;
+    cursor: pointer;
+}
+
+.banner-btn:hover{
+    background-color:  #4256a6;
 }
 
 
@@ -854,7 +863,7 @@ footer ul li a:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+   
   }
   
   .card-front {
@@ -877,41 +886,37 @@ footer ul li a:hover{
     object-fit: cover;
   }
   
-  .abt-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 10px;
-  }
-  
-  /* .abt-small-title {
-    font-size: 14px;
-    font-weight: normal;
-    color: gray;
-  } */
-  
-  .profile-description {
-    font-size: 14px;
-    color: #ffffff;
-    padding: 10px;
-  }
-  
-/* .abt-card {
-    position: relative;
-    overflow: hidden;
-}  */
+ /* Title and small title */
+.abt-title, .abt-small-title {
+    transition: opacity 0.3s ease;
+    margin: 0; /* Adjust margin as needed */
+}
+
+.abt-title {
+    font-family: "Poppins";
+    color: #fff;
+    font-size: 24px;
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+}
+
+
 .abt-small-title {
     font-family: "Poppins";
     color: #fff;
     position: absolute;
     bottom: 20px;
+    font-size: 16px;
     left: 10px;
     padding: 5px 10px;
     border-radius: 5px;
     transition: opacity 0.3s ease;
-} 
-.col-md-3:nth-child(11)  .abt-small-title{
-    bottom: 7px;
 }
+
 
 /* .abt-card-img-overlay {
     background: rgba(8, 31, 136, 0.6);
@@ -944,36 +949,7 @@ footer ul li a:hover{
     transition: opacity 0.3s ease;
 }
 
-/* Title and small title */
-.abt-title, .abt-small-title {
-    transition: opacity 0.3s ease;
-    margin: 0; /* Adjust margin as needed */
-}
 
-.abt-title {
-    font-family: "Poppins";
-    color: #fff;
-    font-size: 24px;
-    position: absolute;
-    bottom: 40px;
-    left: 10px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: opacity 0.3s ease;
-}
-
-
-.abt-small-title {
-    font-family: "Poppins";
-    color: #fff;
-    position: absolute;
-    bottom: 20px;
-    font-size: 16px;
-    left: 10px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: opacity 0.3s ease;
-}
 
 /* Hover Effects */
 .abt-card:hover .abt-card-img-overlay {
@@ -986,11 +962,11 @@ footer ul li a:hover{
 
 /* Profile */
 .profile-main-name{
-    font-size: 13px;
+    font-size: 21px;
 }
 
 .profile-main-designation{
-    font-size:10px;
+    font-size:12px;
 }
 
 .profile-name{
@@ -1003,6 +979,7 @@ footer ul li a:hover{
 
 .profile-description{
     font-size:14px;
+    color: #fff;
 }
 
 /* value section */
@@ -1244,6 +1221,22 @@ footer ul li a:hover{
 .industries-article-bg-35{
     background-image: url(../img/industries/articles/mitigating_fire_risks.png);
 }
+
+.industries-article-bg-36{
+    background-image: url(../img/industries/articles/Document_Banner_36.png);
+}
+.industries-article-bg-37{
+    background-image: url(../img/industries/articles/Document_Banner_37.png);
+   
+}
+.industries-article-bg-38{
+    background-image: url(../img/industries/articles/Document_Banner_38.png);
+}
+
+.industries-article-bg-39{
+    background-image: url(../img/industries/articles/Document_Banner_35.png);
+}
+
 /* -----------------START Insight Page--------------- */
 .insight-card {
     position: relative;
@@ -1294,6 +1287,9 @@ footer ul li a:hover{
 
 .insight-navbar .nav-item:hover{
     border-bottom: 0 !important;
+}
+.nav-link-insight:hover{
+    color: #e1056d;
 }
 .insight-navbar .nav-link-insight.active{
     background-color: #fff !important;
