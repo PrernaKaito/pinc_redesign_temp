@@ -1012,6 +1012,12 @@ footer ul li a:hover{
    
 }
 
+@media(min-width: 2560px){
+   .card-back{
+    height: 376px;
+   } 
+}
+
 @media only screen and (min-width: 320px) and (max-width: 425px) {
     .card-container{
         margin-bottom: 12rem;
