@@ -56,7 +56,7 @@ function scrollToForm() {
     }
 
 
-    // Get In touch and contact us js
+    // Get In touch and Contact us js
     $(document).ready(function() {
         // Function to validate form fields
         function validateFields(fields) {
