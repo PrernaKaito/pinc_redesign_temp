@@ -9,7 +9,8 @@ $dotenv->load();
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-$receivingEmailAddress = 'marketing@pinc.co.in';
+$receivingEmailAddress = 'mahesh.satpute@pincinsure.com';
+// $receivingEmailAddress = 'marketing@pinc.co.in';
 // $receivingEmailAddress = 'nikhil@kaitotech.com';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
