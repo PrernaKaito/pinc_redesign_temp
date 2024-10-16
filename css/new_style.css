@@ -3,6 +3,11 @@ body {
     color: #000;
 }
 
+.custom-row{
+    --bs-gutter-x: -1.5rem;
+}
+
+
 h6,
 .h6,
 h5,
@@ -299,6 +304,11 @@ margin-top:4rem;
 .active-nav {
     border-bottom: 3px solid #e1056d
 }
+
+.active-nav-white {
+    border-bottom: 3px solid #ffffff
+}
+
 
 .navbar-light .navbar-nav .nav-link {
     font-size: 15px;
