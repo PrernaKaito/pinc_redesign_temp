@@ -594,6 +594,11 @@ margin-top:4rem;
         width: 100%;
         z-index: 2;
 }
+
+#inquiryType {
+    background-color: #4256A6 !important; 
+    color: white !important;
+  }
 .get-in-touch-form-container {
     position: relative;
     background: #4256A6;
@@ -1175,6 +1180,10 @@ footer ul li a:hover{
 .wellness-bg-7{
     background-image: url(../img/wellness/Mind_over_matter_How_Mindfulness_builds_immunity.png);
 }
+
+.wellness-bg-8{
+    background-image: url(../img/wellness/Detox.png);
+}
 /*  */
 .risk-bg-1{
     background-image: url(../img/risk_management/);
@@ -1320,6 +1329,10 @@ footer ul li a:hover{
     background-image: url(../img/industries/articles/Document_Banner_35.png);
 }
 
+.industries-article-bg-40{
+    background-image: url(../img/wellness/Cyclone.png);
+}
+
 /* -----------------START Insight Page--------------- */
 .insight-card {
     position: relative;
@@ -1409,6 +1422,10 @@ footer ul li a:hover{
 }
 .article_Mindful_Eating_Demystified_banner{
     background-image: url(../img/insight/banner/article/Mindful_Eating_Demystified.png);
+}
+
+.article_Breaking_the_Scroll_Journey{
+    background-image: url(../img/insight/banner/article/Detox.png);
 }
 .article_mindover_matter_banner{
     background-image: url(../img/insight/banner/article/Mind_over_matter_How_Mindfulness_builds_immunity.png);

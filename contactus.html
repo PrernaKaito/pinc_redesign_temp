@@ -147,9 +147,10 @@
             <li class="nav-item active-nav py-0 py-lg-3">
               <a href="contactUs.html" class="nav-link ">Contact us</a>
             </li>
-            <li class="nav-item active-nav py-0 py-lg-3">
-              <a href="powerbi.html" class="nav-link ">Power Bi</a>
+            <li class="nav-item py-0 py-lg-3">
+              <a href="https://www.pincinsurance.com/corporate/login" class="nav-link ">Login</a>
             </li>
+           
           </div>
         </div>
       </nav>
@@ -232,6 +233,20 @@
                     required="">
                 </div>
 
+                <div class="mb-3">
+                  <label for="inquiryType2" class="form-label">Select*</label>
+
+                  <select class="form-control  form-control-conc bg-transparent cust-form-control" id="inquiryType2" name="inquiryType2" required="">
+                    <option value="" disabled selected></option>
+                    <option value="Job Opening">Job Opening</option>
+                    <option value="Business Inquiry">Business Inquiry</option>
+                    <option value="Partnership">Partnership</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <span id="inquiryType2_error" style="color: red"></span>
+                </div>
+  
+
                 <div class=" mb-3">
                   <label for="company" class="form-label">Name of the Company</label>
                   <span id="company_error" class="text-danger"></span><br>
@@ -251,11 +266,10 @@
                   <input type="text" class="form-control form-control-conc bg-transparent cust-form-control" id="message" name="message">
                 </div>
 
-                <!-- <div class="form-group recaptcha-container">
-                              <div class="g-recaptcha" data-sitekey="your-site-key"></div>
-                          </div> -->
+                <div id="divRecaptcha"class="g-recaptcha" data-sitekey='6LcXmoUqAAAAAFk-ZYLjAPspAXmRFxxGchnSxkvx'></div>
+
                 <div class="mt-4">
-                  <button id="send" type="button" class="secondary1 btn btn-cust-primary rounded-pill px-5">Submit
+                  <button id="send" type="button" class="secondary1 btn btn-cust-primary rounded-pill px-5" onclick="onClick(event)">Submit
                   </button>
                 </div>
               </form>
@@ -853,7 +867,50 @@
   <!-- Template Javascript -->
   <script src="js/main.js"></script>
 
+  <script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
+<script>
+ window.onload = function() {
+        // Check if grecaptcha is available
+        if (typeof grecaptcha !== "undefined") {
+            const recaptchaContainer = document.getElementById('divRecaptcha');
 
+            // Check if the container is not empty before rendering
+            if (recaptchaContainer && !recaptchaContainer.hasAttribute('data-recaptcha')) {
+                // Clear any existing content in the recaptcha container
+                recaptchaContainer.innerHTML = '';
+
+                // Render the reCAPTCHA widget in the element with ID 'divRecaptcha'
+                grecaptcha.render('divRecaptcha', {
+                    'sitekey': '6LcXmoUqAAAAAFk-ZYLjAPspAXmRFxxGchnSxkvx', // Replace with your actual site key
+                    'callback': onloadCallback // Define the callback function
+                });
+
+                // Mark the element as rendered to prevent re-initialization
+                recaptchaContainer.setAttribute('data-recaptcha', 'true');
+            }
+        } else {
+            console.error("reCAPTCHA is not available.");
+        }
+    };
+
+    // Define the callback function
+    function onloadCallback(response) {
+        console.log("reCAPTCHA completed. Response: " + response);
+    }
+
+    // Form validation on submit
+    function validateForm(e) {
+        // Check if the reCAPTCHA is completed (i.e., the checkbox is ticked)
+        const recaptchaResponse = grecaptcha.getResponse();
+
+        // If there's no response (reCAPTCHA is not ticked), prevent form submission and show an alert
+        if (recaptchaResponse.length === 0) {
+            e.preventDefault(); // Prevent form submission
+           
+      
+    }
+}
+</script>
 
 
 </body>

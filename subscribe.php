@@ -16,7 +16,8 @@ $password = $_ENV['DB_PASSWORD'];
 $database = $_ENV['DB_DATABASE'];
 $port = $_ENV['DB_PORT'];
 // Create connection
-$conn = new mysqli($servername, $username, $password, $database,$port);
+$conn = new mysqli("localhost", "root", "newpassword", "newsletter_db");
+
 
 // Check connection
 if ($conn->connect_error) {
@@ -65,7 +66,7 @@ if (isset($_POST['emailer']) && !empty($_POST['emailer'])) {
                         $mailer->Port = $_ENV['SMPT_PORT'];
 
                         // Recipients
-                        $mailer->setFrom('info@kaitotech.com', 'KaitoTech'); // Replace with your "From" email address
+                        $mailer->setFrom('pinc.grouphealth@pincinsure.com', 'Pincinusrance'); // Replace with your "From" email address
                         $mailer->addAddress($email);  // Add the recipient's email address
 
                         // Content
@@ -74,7 +75,7 @@ if (isset($_POST['emailer']) && !empty($_POST['emailer'])) {
                         $mailer->Body = "
                             <p>Dear Subscriber,</p>
                             <p>Thank you for subscribing to our newsletter. We will keep you updated with the latest news.</p>
-                            <p>Best regards,<br>KaitoTech</p>
+                            <p>Best regards,<br>Pincinsurance</p>
                         ";
 
                         // Send the email

@@ -147,6 +147,10 @@
             <li class="nav-item py-0 py-lg-3">
               <a href="contactUs.html" class="nav-link ">Contact us</a>
             </li>
+            <li class="nav-item py-0 py-lg-3">
+              <a href="https://www.pincinsurance.com/corporate/login" class="nav-link ">Login</a>
+            </li>
+           
           </div>
         </div>
       </nav>
@@ -523,7 +527,7 @@
   <!-- END Section -->
 
   <!--START GET IN TOUCH SECTION -->
-  <section id="get-in-touch-form-section">
+<section id="get-in-touch-form-section">
     <div class="container parent-container py-5">
       <div class="px-0 pe-md-5">
         <div class="row">
@@ -542,24 +546,48 @@
                   <span class="" id="name_error" style="color: red"></span>
                 </div>
 
-                <div class="form-floating secondary1 mb-2">
+                <div class="form-floating secondary1 mb-4">
                   <input type="email" class="form-control bg-transparent" id="email" name="email"
                     placeholder="email.com" required="">
                   <label for="email" class="px-0">Email*</label>
                   <!-- <span id="email_error" style="color: red"></span><br> -->
                 </div>
+
+                <div class="form-floating secondary1 mb-2">
+                  <select class="form-control  bg-transparent" id="inquiryType" name="inquiryType" required="">
+                    <option value="" disabled selected></option>
+                    <option value="Job Opening">Job Opening</option>
+                    <option value="Business Inquiry">Business Inquiry</option>
+                    <option value="Partnership">Partnership</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <label for="inquiryType" class="px-0">Select*</label>
+                  <span id="inquiryType_error" style="color: red"></span>
+                </div>
+  
                 <div class="form-floating secondary1 mb-2">
                   <input type="text" class="form-control bg-transparent" id="mobile" name="mobile"
                     placeholder="Enter Contact No." required="">
                   <label for="mobile" class="px-0">Contact Number*</label>
                   <span id="mobile_error" style="color: red"></span>
                 </div>
-                <div class="form-floating secondary1">
+                <div class="form-floating secondary1 mb-3">
                   <input type="text" class="form-control bg-transparent" id="city" name="city" placeholder="City"
                     required="">
                   <label for="city" class="px-0">City*</label>
                   <span id="city_error" style="color: red"></span>
                 </div>
+                <div class="form-floating secondary1 mb-2">
+                  <input type="text" class="form-control bg-transparent " id="textmessage" name="textmessage"
+                  placeholder="Message"   required="">
+                  <label for="textmessage" class="px-0">Message</label>
+                
+                </div>
+
+
+                <div id="recaptchaindex"class="g-recaptcha" data-sitekey='6LcXmoUqAAAAAFk-ZYLjAPspAXmRFxxGchnSxkvx'></div>
+
+               
                 <div class="text-center mt-4">
                   <button id="submit" type="button"
                     class="secondary1 btn btn-cust-primary rounded-pill px-5">Submit</button>
@@ -800,11 +828,11 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" src="./plugin/slick22/slick.min.js"></script>
-
+  <script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
   <!-- Template Javascript -->
   <script src="js/main.js"></script>
 
-  <script>
+<script>
     $(".your-class").slick({
       dots: true,
       centerMode: false,
@@ -854,38 +882,76 @@
     }
 
     // Handle form submission
-    function handleFormSubmit(event) {
-        event.preventDefault(); // Prevent the default form submission
+    document.getElementById("subscriptionForm").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-        if (!validateForm()) {
-            return; // Stop execution if validation fails
-        }
+    const email = document.getElementById("emailer").value;
 
-        var email = document.getElementById('emailer').value;
-
-        // Simulate a successful subscription (replace this with your actual API call)
-        fetch('subscribe.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: new URLSearchParams({
-                'emailer': email
-            })
+    fetch('subscribe.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams({
+            'emailer': email
         })
-        .then(response => response.text())
-        .then(text => {
-            if (text.includes('Subscription successful!')) {
-                showSuccessModal(); // Show modal
-            } else {
-                alert(text); // Show error message if needed
+    })
+    .then(response => response.text())
+    .then(response => {
+        console.log(response); // For debugging
+        alert(response); // To show the PHP response to the user
+    })
+    .catch(error => {
+        console.error("Error:", error);
+    });
+});
+
+  
+
+    // recaptcha begins
+    window.onload = function() {
+        // Check if grecaptcha is available
+        if (typeof grecaptcha !== "undefined") {
+            const recaptchaContainer = document.getElementById('recaptchaindex');
+
+            // Check if the container is not empty before rendering
+            if (recaptchaContainer && !recaptchaContainer.hasAttribute('data-recaptcha')) {
+                // Clear any existing content in the recaptcha container
+                recaptchaContainer.innerHTML = '';
+
+                // Render the reCAPTCHA widget in the element with ID 'recaptchaindex'
+                grecaptcha.render('recaptchaindex', {
+                    'sitekey': '6LcXmoUqAAAAAFk-ZYLjAPspAXmRFxxGchnSxkvx', // Replace with your actual site key
+                    'callback': onloadCallback // Define the callback function
+                });
+
+                // Mark the element as rendered to prevent re-initialization
+                recaptchaContainer.setAttribute('data-recaptcha', 'true');
             }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('An error occurred while processing your request.');
-        });
+        } else {
+            console.error("reCAPTCHA is not available.");
+        }
+    };
+
+    // Define the callback function
+    function onloadCallback(response) {
+        console.log("reCAPTCHA completed. Response: " + response);
     }
+
+    // Form validation on submit
+    function validateForm(e) {
+        // Check if the reCAPTCHA is completed (i.e., the checkbox is ticked)
+        const recaptchaResponse = grecaptcha.getResponse();
+
+        // If there's no response (reCAPTCHA is not ticked), prevent form submission and show an alert
+        if (recaptchaResponse.length === 0) {
+            e.preventDefault(); // Prevent form submission
+            alert("Please complete the reCAPTCHA.");
+        }
+    }
+
+    // Attach the form validation function to the form's submit event
+    document.getElementById('contactForm').addEventListener('submit', validateForm);
   </script>
 
 </body>
